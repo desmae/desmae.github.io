@@ -44,6 +44,7 @@
       <li><a href="features.html">New Features</a></li>
       <li><a href="changelog.html">Changelog</a></li>
       <li><a href="teaser.html">Upcoming</a></li>
+      <li><button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button></li>
     </ul>
   </nav>
   
@@ -75,10 +76,37 @@
           <td>!myscore</td>
           <td><code>!myscore</code></td>
           <td><code>!myscore</code></td>
-          <td>Allows you to check your score.</td>
+          <td>Allows you to check your score. (coming soon, just had to make at least 3 commands so this page would look full lol)</td>
         </tr>
       </tbody>
     </table>
   </div>
+  <script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+  
+    function enableDarkMode() {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('darkMode', 'enabled'); 
+      toggleButton.textContent = "Light Mode";
+    }
+  
+    function disableDarkMode() {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('darkMode', 'disabled');
+      toggleButton.textContent = "Dark Mode";
+    }
+  
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      enableDarkMode();
+    }
+  
+    toggleButton.addEventListener('click', () => {
+      if (document.body.classList.contains('dark-mode')) {
+        disableDarkMode();
+      } else {
+        enableDarkMode();
+      }
+    });
+  </script>
 </body>
 </html>

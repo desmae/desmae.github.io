@@ -29,18 +29,39 @@
       It is currently in a closed alpha, and is expected be released to the public some time in 2025. 
       To follow and support development, visit <strong><u><a href="https://www.youtube.com/@desmae/featured">my YouTube channel</a></u></strong> and keep an eye out for upcoming test streams where you can participate as a viewer!
     </p>
+    <br>
+    <p>Last updated: 2025-04-10</p>
+    <h6>Desmae 2025 (C). Not affiliated with Nintendo.</h6>
   </div>
   
   <script>
     const toggleButton = document.getElementById('dark-mode-toggle');
+  
+    function enableDarkMode() {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('darkMode', 'enabled'); 
+      toggleButton.textContent = "Light Mode";
+    }
+  
+    function disableDarkMode() {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('darkMode', 'disabled');
+      toggleButton.textContent = "Dark Mode";
+    }
+  
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      enableDarkMode();
+    }
+  
     toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
       if (document.body.classList.contains('dark-mode')) {
-        toggleButton.textContent = "Light Mode";
+        disableDarkMode();
       } else {
-        toggleButton.textContent = "Dark Mode";
+        enableDarkMode();
       }
     });
   </script>
+  
 </body>
+
 </html>
