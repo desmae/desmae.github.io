@@ -1,0 +1,173 @@
+/* Importing modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Global Base Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Links reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5b5b5b;
+  flex-grow: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #555;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background-color: #ff9a9e;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9a9e;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Main Container for Content */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #4b4b4b;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+p {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Cards for Commands, Features, Changelogs, etc. */
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  font-weight: 600;
+  color: #555;
+}
+
+.card-content {
+  display: none;
+  padding-top: 15px;
+}
+
+.card.active .card-content {
+  display: block;
+}
+
+/* Buttons */
+.button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+/* Modern pastel styled feature list */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  .feature-list li {
+    position: relative;
+    /* Increase padding-left so the text doesn't collide with the bullet */
+    padding: 10px 15px 10px 48px; 
+    margin-bottom: 15px;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Bullet styling */
+  .feature-list li::before {
+    content: "";
+    position: absolute;
+    /* Move this bullet further left so it stays outside the text area */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  }
+  
+  

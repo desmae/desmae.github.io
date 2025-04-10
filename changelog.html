@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">GTI Chat Bot</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="commands.html">Commands</a></li>
+          <li><a href="features.html">New Features</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="teaser.html">Upcoming</a></li>
+        </ul>
+      </nav>
+  <div class="container">
+    <h1>Changelog</h1>
+    
+    <div class="card" id="updateAlpha2">
+      <div class="card-header" onclick="toggleCard('updateAlpha2')">
+        <h3>Alpha 2</h3>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="card-content">
+        <p>
+            Welcome to the Alpha 2 update! Mostly bug fixes, but I might've sneaked some new features here and there...
+        </p>
+        <ul>
+            <li>This small website lol</li>
+            <li>Alias update: You can now use more aliases to access items! [Pocket Egg, Poacher's Saw] -> Adult Trade Sequence Item. [Wallet, Adult's Wallet] -> Wallet Upgrade.
+                This allows certain guesses to redirect users to the actual item as it's named in the internal files
+            </li>
+            <li>Some backend stuff that you do not need to worry about yet</li>
+            <li>Items update: Certain items were unfortunately forgotten and now are added to the guessable items list (most are just SoH Rando features): 
+                [Greg the Rupee, Bronze Scale, Bombchu Bag]. I also forgot to add Double Defense.</li>
+            <li>[FIXED BUG] Manual value changes in JSON files are overwritten by !item.</li>
+            <li>[FIXED BUG] Non-key items could only be obtained once</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="card" id="updateAlpha1">
+      <div class="card-header" onclick="toggleCard('updateAlpha1')">
+        <h3>Alpha 1</h3>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="card-content">
+        <p> Welcome to the Alpha 1 update! This is the very first release of the GTI Chat Bot!</p>
+        <ul>
+          <li>Some backend stuff, not important for players</li>
+          <li>!guessing and obtaining guessed items</li>
+          <li>Alias + partial input support + fuzzy matching for guesses</li>
+          <li>Endgame rules: when X number of major items are left, all major and "key" items are worth double.</li>
+          <li>Chatbot functionality</li>
+          <li>OBS Leaderboard overlay</li>
+          <li>Batching messages together</li>
+          <li>Mod-only commands</li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <script>
+    function toggleCard(cardId) {
+      var card = document.getElementById(cardId);
+      card.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Chat Bot Game Commands</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Table styling for commands */
+    .command-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .command-table th, .command-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .command-table th {
+      background-color: #ff9a9e;
+      color: #fff;
+      font-weight: 600;
+    }
+    .command-table tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    .command-table tr:hover {
+      background-color: rgba(255, 234, 230, 0.9);
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">GTI Chat Bot</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="commands.html">Commands</a></li>
+      <li><a href="features.html">New Features</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+      <li><a href="teaser.html">Upcoming</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Main Container -->
+  <div class="container">
+    <h1>Game Commands</h1>
+    <table class="command-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Syntax</th>
+          <th>Example</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>!guess</td>
+          <td><code>!guess {itemName}</code></td>
+          <td><code>!guess fire arrows</code></td>
+          <td>Guess an item before I obtain it. You can change your guess after a one-minute cooldown.</td>
+        </tr>
+        <tr>
+          <td>!myguess</td>
+          <td><code>!myguess</code></td>
+          <td><code>!myguess</code></td>
+          <td>Allows you to check your guess in case you forgot.</td>
+        </tr>
+        <tr>
+          <td>!myscore</td>
+          <td><code>!myscore</code></td>
+          <td><code>!myscore</code></td>
+          <td>Allows you to check your score.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
