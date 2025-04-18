@@ -62,9 +62,25 @@
       <tbody>
         <tr>
           <td>!guess</td>
-          <td><code>!guess {itemName}</code></td>
+          <td><code>!guess {itemName}</code> OR <code>!g {itemName}</code></td>
           <td><code>!guess fire arrows</code></td>
-          <td>Guess an item before I obtain it. You can change your guess after a one-minute cooldown.</td>
+          <td>Guess an item before it is obtained. You can change your guess after a one-minute cooldown.</td>
+        </tr>
+        <tr>
+          <td>!guessdungeon</td>
+          <td><code>!guessdungeon {thisDungeon}, {couldBeThisDungeon}</code> OR <br> <code>!gd {dungeon1} > {dungeon2}</code></td>
+          <td><code>!guessdungeon Forest Temple, Fire Temple</code></td>
+          <td>Guess a dungeon entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points.
+            Dungeon names have to be separated by any of these characters: [, = > : / | -]
+          </td>
+        </tr>
+        <tr>
+          <td>!guessboss</td>
+          <td><code>!guessboss {thisDungeon}, {couldHaveThisBoss}</code> OR <br> <code>!gb {dungeon1} > {dungeon2}</code></td>
+          <td><code>!guessboss Dodongo's Cavern, Bongo Bongo</code></td>
+          <td>Guess a boss entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points.
+            Dungeon names have to be separated by any of these characters: [, = > : / | -]
+          </td>
         </tr>
         <tr>
           <td>!myguess</td>
@@ -76,11 +92,152 @@
           <td>!myscore</td>
           <td><code>!myscore</code></td>
           <td><code>!myscore</code></td>
-          <td>Allows you to check your score. (coming soon, just had to make at least 3 commands so this page would look full lol)</td>
+          <td>Allows you to check your score.</td>
+        </tr>
+        <tr>
+          <td>!random</td>
+          <td><code>!random</code></td>
+          <td><code>!random</code></td>
+          <td>Randomly picks an item for you. Useful if you're new to the game!</td>
+        </tr>
+        <tr>
+          <td>!anonymous</td>
+          <td><code>!anonymous</code> OR <br> <code>!anonymous {newUsername}</code></td>
+          <td><code>!anonymous FakeName50</code></td>
+          <td>Picks an anonymous name for you if you don't put one down for it to use instead. 
+            You can only change your anonymous name once every 24 hours, but can toggle it on/off at any time using the !anonymous command.</td>
         </tr>
       </tbody>
     </table>
+    <h2>Guessable Items</h2> 
+    <br>
+    <p>You can spell them <strong>almost</strong> any way you'd like as long as it's close to the spelling.</p>
+    <br>
+    <h3>Key Items</h3>
+    <ul>
+      <li>Adult Trade Sequence Item</li>
+      <li>Child Trade Sequence Item</li>
+      <li>Biggoron's Sword</li>
+      <li>Bolero of Fire</li>
+      <li>Bomb Bag</li>
+      <li>Boomerang</li>
+      <li>Bottle</li>
+      <li>Bow</li>
+      <li>Deku Nuts Upgrade</li>
+      <li>Deku Shield</li>
+      <li>Deku Stick Upgrade</li>
+      <li>Din's Fire</li>
+      <li>Epona's Song</li>
+      <li>Ocarina</li>
+      <li>Farore's Wind</li>
+      <li>Fire Arrows</li>
+      <li>Fire Medallion</li>
+      <li>Forest Medallion</li>
+      <li>Gerudo Membership Card</li>
+      <li>Strength Upgrade</li>
+      <li>Goron's Ruby</li>
+      <li>Goron Tunic</li>
+      <li>Hookshot</li>
+      <li>Hover Boots</li>
+      <li>Hylian Shield</li>
+      <li>Ice Arrows</li>
+      <li>Iron Boots</li>
+      <li>Kokiri's Emerald</li>
+      <li>Kokiri Sword</li>
+      <li>Lens of Truth</li>
+      <li>Light Arrows</li>
+      <li>Light Medallion</li>
+      <li>Magic Beans</li>
+      <li>Magic Meter</li>
+      <li>Master Sword</li>
+      <li>Megaton Hammer</li>
+      <li>Minuet of Forest</li>
+      <li>Mirror Shield</li>
+      <li>Nayru's Love</li>
+      <li>Nocturne of Shadow</li>
+      <li>Ocarina Note</li>
+      <li>Prelude of Light</li>
+      <li>Requiem of Spirit</li>
+      <li>Saria's Song</li>
+      <li>Serenade of Water</li>
+      <li>Shadow Medallion</li>
+      <li>Scale</li>
+      <li>Slingshot</li>
+      <li>Song of Storms</li>
+      <li>Song of Time</li>
+      <li>Spirit Medallion</li>
+      <li>Stone of Agony</li>
+      <li>Sun's Song</li>
+      <li>Triforce Piece</li>
+      <li>Wallet Upgrade</li>
+      <li>Water Medallion</li>
+      <li>Zelda's Lullaby</li>
+      <li>Zora's Sapphire</li>
+      <li>Zora Tunic</li>
+      <li>Greg the Rupee</li>
+      <li>Double Defense</li>
+      <li>Bombchu Bag</li>
+      <li>Enemy Soul</li>
+      <li>Boss Soul</li>
+    </ul>
+
+    <h3>Mid Items (Keys and Silver Rupees)</h3>
+    <ul>
+      <li>Forest Temple Small Key</li>
+      <li>Fire Temple Small Key</li>
+      <li>Water Temple Small Key</li>
+      <li>Shadow Temple Small Key</li>
+      <li>Spirit Temple Small Key</li>
+      <li>Gerudo Fortress Small Key</li>
+      <li>Gerudo's Training Grounds Small Key</li>
+      <li>Ganon's Castle Small Key</li>
+      <li>Bottom of the Well Small Key</li>
+      <li>Treasure Game Small Key</li>
+      <li>Forest Temple Boss Key</li>
+      <li>Fire Temple Boss Key</li>
+      <li>Water Temple Boss Key</li>
+      <li>Shadow Temple Boss Key</li>
+      <li>Spirit Temple Boss Key</li>
+      <li>Shadow Temple Silver Rupee</li>
+      <li>Spirit Temple Silver Rupee</li>
+      <li>Bottom of the Well Silver Rupee</li>
+      <li>Ice Cavern Silver Rupee</li>
+      <li>Gerudo's Training Grounds Silver Rupee</li>
+      <li>Ganon's Castle Silver Rupee</li>
+    </ul>
+
+    <h3>Non-Key Items (Reusable)</h3>
+    <ul>
+      <li>Deku Sticks</li>
+      <li>Deku Nuts</li>
+      <li>Seeds</li>
+      <li>Arrows</li>
+      <li>Bombchu</li>
+      <li>Bombs</li>
+      <li>Magic Jar</li>
+      <li>Recovery Heart</li>
+      <li>Heart Piece</li>
+      <li>Heart Container</li>
+      <li>Skulltula Token</li>
+      <li>Milk</li>
+      <li>Red Potion</li>
+      <li>Blue Potion</li>
+      <li>Green Potion</li>
+      <li>Fairy</li>
+      <li>Blue Fire</li>
+      <li>Fish</li>
+      <li>Bug</li>
+      <li>Poe</li>
+      <li>Big Poe</li>
+      <li>Green Rupee</li>
+      <li>Blue Rupee</li>
+      <li>Red Rupee</li>
+      <li>Purple Rupee</li>
+      <li>Gold Rupee</li>
+      <li>Trap</li>
+    </ul>
   </div>
+
   <script>
     const toggleButton = document.getElementById('dark-mode-toggle');
   
@@ -108,5 +265,8 @@
       }
     });
   </script>
+  
+    
+    
 </body>
 </html>

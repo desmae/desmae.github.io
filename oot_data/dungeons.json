@@ -1,0 +1,52 @@
+{
+    "dungeons": [
+      {
+        "name": "Deku Tree",
+        "aliases": ["Great Deku Tree", "Inside Deku Tree", "DT", "GDT"]
+      },
+      {
+        "name": "Dodongo's Cavern",
+        "aliases": ["Dodongo Cavern", "Dodongos Cavern", "DC"]
+      },
+      {
+        "name": "Jabu Jabu's Belly",
+        "aliases": ["Jabu's Belly", "Inside Jabu-Jabu", "JJB"]
+      },
+      {
+        "name": "Forest Temple",
+        "aliases": ["FoT", "Forest"]
+      },
+      {
+        "name": "Fire Temple",
+        "aliases": ["FiT", "Fire"]
+      },
+      {
+        "name": "Water Temple",
+        "aliases": ["WaT", "Water"]
+      },
+      {
+        "name": "Shadow Temple",
+        "aliases": ["ShT", "Shadow"]
+      },
+      {
+        "name": "Spirit Temple",
+        "aliases": ["SpT", "Spirit"]
+      },
+      {
+        "name": "Ganon's Castle",
+        "aliases": ["Castle", "Ganon Castle", "GC"]
+      },
+      {
+        "name": "Ganon's Tower",
+        "aliases": ["Tower", "Ganon Tower", "GT"]
+      },
+      {
+        "name": "Ice Cavern",
+        "aliases": ["IceCavern", "IC"]
+      },
+      {
+        "name": "Bottom of the Well",
+        "aliases": ["BotW", "Bottom Well", "Well"]
+      }
+    ]
+  }

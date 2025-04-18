@@ -1,0 +1,41 @@
+{
+    "bosses": [
+      {
+        "name": "Gohma",
+        "aliases": ["Queen Gohma", "Gohma Boss", "QG"]
+      },
+      {
+        "name": "King Dodongo",
+        "aliases": ["Dodongo", "Dodongo Boss", "KD"]
+      },
+      {
+        "name": "Barinade",
+        "aliases": ["Barinade", "BN", "BD"]
+      },
+      {
+        "name": "Phantom Ganon",
+        "aliases": ["Forest Temple Boss", "Phantom", "Phantom Ganon Boss", "PG"]
+      },
+      {
+        "name": "Volvagia",
+        "aliases": ["Fire Temple Boss", "VV", "VG"]
+      },
+      {
+        "name": "Morpha",
+        "aliases": ["Water Temple Boss", "MP", "MR"]
+      },
+      {
+        "name": "Bongo Bongo",
+        "aliases": ["Shadow Temple Boss", "Bongo", "Bongo Boss", "BB"]
+      },
+      {
+        "name": "Twinrova",
+        "aliases": ["Twin Rova", "Spirit Temple Boss", "TR"]
+      },
+      {
+        "name": "Ganondorf",
+        "aliases": ["Ganon", "Final Boss", "Ganondorf Boss", "GD"]
+      }
+    ]
+  }
+  

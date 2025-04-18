@@ -1,0 +1,411 @@
+{
+  "key_items": [
+    {
+      "name": "Adult Trade Sequence Item",
+      "amount": 11,
+      "aliases": ["Claim Check", "Pocket Egg", "Pocket Cucco", "Cojiro", "Broken Giant's Knife", 
+      "Broken Goron's Sword", "Broken Sword", "Broken Knife", "Knife", "Giant's Knife", "Blue Cucco", "Odd Mushroom", 
+      "Odd Poultice", "Odd Potion", "Saw", "Poacher's Saw", "Prescription", "Doctor's Note", "Eyeball Frog", "Frog", "Eyedrops", "Eye Drops", "Drops"]
+    },
+    {
+      "name": "Child Trade Sequence Item",
+      "amount": 10,
+      "aliases": ["Weird Egg", "Zelda's Letter", "Keaton Mask", "Skull Mask", "Spooky Mask", "Bunny Hood", "Goron Mask", "Zora Mask", "Gerudo Mask", "Mask of Truth"]
+    },
+    {
+      "name": "Biggoron's Sword",
+      "amount": 1
+    },
+    {
+      "name": "Bolero of Fire",
+      "amount": 1
+    },
+    {
+      "name": "Bomb Bag",
+      "amount": 3
+    },
+    {
+      "name": "Boomerang",
+      "amount": 1
+    },
+    {
+      "name": "Bottle",
+      "amount": 6,
+      "aliases": ["Ruto's Letter"]
+    },
+    {
+      "name": "Bow",
+      "amount": 1,
+      "aliases": ["Fairy Bow"]
+    },
+    {
+      "name": "Deku Nuts Upgrade",
+      "amount": 3
+    },
+    {
+      "name": "Deku Shield",
+      "amount": 10
+    },
+    {
+      "name": "Deku Stick Upgrade",
+      "amount": 3
+    },
+    {
+      "name": "Din's Fire",
+      "amount": 1
+    },
+    {
+      "name": "Epona's Song",
+      "amount": 1
+    },
+    {
+      "name": "Ocarina",
+      "amount": 2,
+      "aliases": ["Fairy Ocarina", "Ocarina of Time"]
+    },
+    {
+      "name": "Farore's Wind",
+      "amount": 1
+    },
+    {
+      "name": "Fire Arrows",
+      "amount": 1
+    },
+    {
+      "name": "Fire Medallion",
+      "amount": 1
+    },
+    {
+      "name": "Forest Medallion",
+      "amount": 1
+    },
+    {
+      "name": "Gerudo Membership Card",
+      "amount": 1,
+      "aliases": ["Gerudo Card"]
+    },
+    {
+      "name": "Strength Upgrade",
+      "amount": 3,
+      "aliases": ["Goron's Bracelet", "Silver Gauntlets", "Gold Gauntlets", "Gauntlets"]
+    },
+    {
+      "name": "Goron's Ruby",
+      "amount": 1
+    },
+    {
+      "name": "Goron Tunic",
+      "amount": 5,
+      "aliases": ["Red Tunic"]
+    },
+    {
+      "name": "Hookshot",
+      "amount": 2,
+      "aliases": ["Grappling Hook", "Clawshot"]
+    },
+    {
+      "name": "Hover Boots",
+      "amount": 1
+    },
+    {
+      "name": "Hylian Shield",
+      "amount": 5
+    },
+    {
+      "name": "Ice Arrows",
+      "amount": 1
+    },
+    {
+      "name": "Iron Boots",
+      "amount": 1
+    },
+    {
+      "name": "Kokiri's Emerald",
+      "amount": 1
+    },
+    {
+      "name": "Kokiri Sword",
+      "amount": 1
+    },
+    {
+      "name": "Lens of Truth",
+      "amount": 1
+    },
+    {
+      "name": "Light Arrows",
+      "amount": 1
+    },
+    {
+      "name": "Light Medallion",
+      "amount": 1
+    },
+    {
+      "name": "Magic Beans",
+      "amount": 10
+    },
+    {
+      "name": "Magic Meter",
+      "amount": 2,
+      "aliases": ["Magic Upgrade"]
+    },
+    {
+      "name": "Master Sword",
+      "amount": 1
+    },
+    {
+      "name": "Megaton Hammer",
+      "amount": 1,
+      "aliases": ["Hammer"]
+    },
+    {
+      "name": "Minuet of Forest",
+      "amount": 1,
+      "aliases": ["Forest Song"]
+    },
+    {
+      "name": "Mirror Shield",
+      "amount": 1
+    },
+    {
+      "name": "Nayru's Love",
+      "amount": 1
+    },
+    {
+      "name": "Nocturne of Shadow",
+      "amount": 1,
+      "aliases": ["Shadow Song"]
+    },
+    {
+      "name": "Ocarina Note",
+      "amount": "5",
+      "aliases": ["Ocarina Button"]
+    },
+    {
+      "name": "Prelude of Light",
+      "amount": 1,
+      "aliases": ["Light Song"]
+    },
+    {
+      "name": "Requiem of Spirit",
+      "amount": 1,
+      "aliases": ["Spirit Song"]
+    },
+    {
+      "name": "Saria's Song",
+      "amount": 1
+    },
+    {
+      "name": "Serenade of Water",
+      "amount": 1,
+      "aliases": ["Water Song"]
+    },
+    {
+      "name": "Shadow Medallion",
+      "amount": 1
+    },
+    {
+      "name": "Scale",
+      "amount": 3,
+      "aliases": ["Bronze Scale", "Silver Scale", "Golden Scale", "Gold Scale"]
+    },
+    {
+      "name": "Slingshot",
+      "amount": 3,
+      "aliases": ["Seed Bag", "Seed Upgrade", "Slingshot Upgrade"]
+    },
+    {
+      "name": "Song of Storms",
+      "amount": 1
+    },
+    {
+      "name": "Song of Time",
+      "amount": 1
+    },
+    {
+      "name": "Spirit Medallion",
+      "amount": 1
+    },
+    {
+      "name": "Stone of Agony",
+      "amount": 1,
+      "aliases": ["Shard of Agony", "Agony Stone", "Agony Shard"]
+    },
+    {
+      "name": "Sun's Song",
+      "amount": 1
+    },
+    {
+      "name": "Triforce Piece",
+      "amount": 100
+    },
+    {
+      "name": "Wallet Upgrade",
+      "amount": 4,
+      "aliases": ["Child's Wallet", "Wallet", "Adult's Wallet", "Giant's Wallet", "Tycoon Wallet"]
+    },
+    {
+      "name": "Water Medallion",
+      "amount": 1
+    },
+    {
+      "name": "Zelda's Lullaby",
+      "amount": 1
+    },
+    {
+      "name": "Zora's Sapphire",
+      "amount": 1
+    },
+    {
+      "name": "Zora Tunic",
+      "amount": 1,
+      "aliases": ["Blue Tunic"]
+    },
+    {
+      "name": "Greg the Rupee",
+      "amount": 20,
+      "aliases": ["Greg"]
+    },
+    {
+      "name": "Double Defense",
+      "amount": 1,
+      "aliases": ["Defense", "Double HP", "Double Health"]
+    },
+    {
+      "name": "Bombchu Bag",
+      "amount": 1
+    },
+    {
+      "name": "Enemy Soul",
+      "amount": 1
+    },
+    {
+      "name": "Boss Soul",
+      "amount": 1
+    }
+  ],
+  "mid_items": [
+    {
+      "name": "Forest Temple Small Key",
+      "amount": 5,
+      "aliases": ["Forest Temple Key"]
+    },
+    {
+      "name": "Fire Temple Small Key",
+      "amount": 8,
+      "aliases": ["Fire Temple Key"]
+    },
+    {
+      "name": "Water Temple Small Key",
+      "amount": 6,
+      "aliases": ["Water Temple Key"]
+    },
+    {
+      "name": "Shadow Temple Small Key",
+      "amount": 5,
+      "aliases": ["Shadow Temple Key"]
+    },
+    {
+      "name": "Spirit Temple Small Key",
+      "amount": 5,
+      "aliases": ["Spirit Temple Key"]
+    },
+    {
+      "name": "Gerudo Fortress Small Key",
+      "amount": 4,
+      "aliases": ["Gerudo Fortress Key"]
+    },
+    {
+      "name": "Gerudo's Training Grounds Small Key",
+      "amount": 9,
+      "aliases": ["Gerudo's Traning Grounds Key", "GTG Key", "Training Grounds Key", "Training Grounds Small Key", "Grounds Small Key", "Grounds Key"]
+    },
+    {
+      "name": "Ganon's Castle Small Key",
+      "amount": 2,
+      "aliases": ["Ganon's Castle Key"]
+    },
+    {
+      "name": "Bottom of the Well Small Key",
+      "amount": 3,
+      "aliases": ["Bottom of the Well Key"]
+    },
+    {
+      "name": "Treasure Game Small Key",
+      "amount": 10,
+      "aliases": ["Treasure Game Key"]
+    },
+    {
+      "name": "Forest Temple Boss Key",
+      "amount": 1
+    },
+    {
+      "name": "Fire Temple Boss Key",
+      "amount": 1
+    },
+    {
+      "name": "Water Temple Boss Key",
+      "amount": 1
+    },
+    {
+      "name": "Shadow Temple Boss Key",
+      "amount": 1
+    },
+    {
+      "name": "Spirit Temple Boss Key",
+      "amount": 1
+    },
+    {
+      "name": "Shadow Temple Silver Rupee",
+      "amount": 20
+    },
+    {
+      "name": "Spirit Temple Silver Rupee",
+      "amount": 20
+    },
+    {
+      "name": "Bottom of the Well Silver Rupee",
+      "amount": 20
+    },
+    {
+      "name": "Ice Cavern Silver Rupee",
+      "amount": 20
+    },
+    {
+      "name": "Gerudo's Training Grounds Silver Rupee",
+      "amount": 20
+    },
+    {
+      "name": "Ganon's Castle Silver Rupee",
+      "amount": 20
+    }
+  ],
+  "non_key_items": [
+    "Deku Sticks",
+    "Deku Nuts",
+    "Seeds",
+    "Arrows",
+    "Bombchu",
+    "Bombs",
+    "Magic Jar",
+    "Recovery Heart",
+    "Heart Piece",
+    "Heart Container",
+    "Skulltula Token",
+    "Milk",
+    "Red Potion",
+    "Blue Potion",
+    "Green Potion",
+    "Fairy",
+    "Blue Fire",
+    "Fish",
+    "Bug",
+    "Poe",
+    "Big Poe",
+    "Green Rupee",
+    "Blue Rupee",
+    "Red Rupee",
+    "Purple Rupee",
+    "Gold Rupee",
+    "Trap"
+  ]
+}
