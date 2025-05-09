@@ -3,35 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YouTube Chat Bot Game Commands</title>
+  <title>GTI - Game Commands</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .command-table {
+    .command-section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .items-section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s ease forwards 0.3s;
+      background: var(--card-bg-light);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-top: 3rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode .items-section {
+      background: var(--card-bg-dark);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Search bar improvements */
+    .search-container {
+      position: relative;
+      max-width: 600px;
+      margin: 2rem auto;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #888;
+      font-size: 1.2rem;
+    }
+
+    #item-search {
+      padding: 1rem 3rem;
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+      font-size: 1rem;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+      background: rgba(255, 255, 255, 0.8);
     }
-    .command-table th, .command-table td {
-      padding: 12px 15px;
+
+    #item-search:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 15px rgba(255, 154, 158, 0.2);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    /* Table Styling */
+    #items-table {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      margin-top: 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    #items-table th {
+      background: var(--accent-color);
+      color: white;
+      padding: 1rem;
       text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-    .command-table th {
-      background-color: #ff9a9e;
-      color: #fff;
       font-weight: 600;
     }
-    .command-table tr:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.8);
+
+    #items-table td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.6);
     }
-    .command-table tr:hover {
-      background-color: rgba(255, 234, 230, 0.9);
+
+    #items-table tr:last-child td {
+      border-bottom: none;
     }
-    code {
-      background-color: #f4f4f4;
-      padding: 2px 4px;
-      border-radius: 4px;
-      font-family: 'Courier New', Courier, monospace;
+
+    #items-table tbody tr {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: slideInRow 0.3s ease forwards;
+    }
+
+    @keyframes slideInRow {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #items-table tbody tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    #items-table tbody tr:hover td {
+      background: rgba(255, 154, 158, 0.1);
+    }
+
+    /* Dark mode overrides */
+    body.dark-mode .search-icon {
+      color: #666;
+    }
+
+    body.dark-mode code {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode code:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    body.dark-mode #item-search {
+      background: rgba(42, 42, 42, 0.9);
+      border-color: #444;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode #item-search:focus {
+      background: rgba(52, 52, 52, 0.95);
+    }
+
+    body.dark-mode #items-table td {
+      background: rgba(42, 42, 42, 0.6);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode #items-table tbody tr:nth-child(even) td {
+      background: rgba(42, 42, 42, 0.4);
+    }
+
+    body.dark-mode #items-table tbody tr:hover td {
+      background: rgba(255, 255, 255, 0.05);
     }
   </style>
 </head>
@@ -49,201 +171,112 @@
   </nav>
   
   <div class="container">
-    <h1>Game Commands</h1>
-    <table class="command-table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Syntax</th>
-          <th>Example</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>!guess</td>
-          <td><code>!guess {itemName}</code> OR <code>!g {itemName}</code></td>
-          <td><code>!guess fire arrows</code></td>
-          <td>Guess an item before it is obtained. You can change your guess after a one-minute cooldown.</td>
-        </tr>
-        <tr>
-          <td>!guessdungeon</td>
-          <td><code>!guessdungeon {thisDungeon}, {couldBeThisDungeon}</code> OR <br> <code>!gd {dungeon1} > {dungeon2}</code></td>
-          <td><code>!guessdungeon Forest Temple, Fire Temple</code></td>
-          <td>Guess a dungeon entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points.
-            Dungeon names have to be separated by any of these characters: [, = > : / | -]
-          </td>
-        </tr>
-        <tr>
-          <td>!guessboss</td>
-          <td><code>!guessboss {thisDungeon}, {couldHaveThisBoss}</code> OR <br> <code>!gb {dungeon1} > {dungeon2}</code></td>
-          <td><code>!guessboss Dodongo's Cavern, Bongo Bongo</code></td>
-          <td>Guess a boss entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points.
-            Dungeon names have to be separated by any of these characters: [, = > : / | -]
-          </td>
-        </tr>
-        <tr>
-          <td>!myguess</td>
-          <td><code>!myguess</code></td>
-          <td><code>!myguess</code></td>
-          <td>Allows you to check your guess in case you forgot.</td>
-        </tr>
-        <tr>
-          <td>!myscore</td>
-          <td><code>!myscore</code></td>
-          <td><code>!myscore</code></td>
-          <td>Allows you to check your score.</td>
-        </tr>
-        <tr>
-          <td>!random</td>
-          <td><code>!random</code></td>
-          <td><code>!random</code></td>
-          <td>Randomly picks an item for you. Useful if you're new to the game!</td>
-        </tr>
-        <tr>
-          <td>!anonymous</td>
-          <td><code>!anonymous</code> OR <br> <code>!anonymous {newUsername}</code></td>
-          <td><code>!anonymous FakeName50</code></td>
-          <td>Picks an anonymous name for you if you don't put one down for it to use instead. 
-            You can only change your anonymous name once every 24 hours, but can toggle it on/off at any time using the !anonymous command.</td>
-        </tr>
-      </tbody>
-    </table>
-    <h2>Guessable Items</h2> 
-    <br>
-    <p>You can spell them <strong>almost</strong> any way you'd like as long as it's close to the spelling.</p>
-    <br>
-    <h3>Key Items</h3>
-    <ul>
-      <li>Adult Trade Sequence Item</li>
-      <li>Child Trade Sequence Item</li>
-      <li>Biggoron's Sword</li>
-      <li>Bolero of Fire</li>
-      <li>Bomb Bag</li>
-      <li>Boomerang</li>
-      <li>Bottle</li>
-      <li>Bow</li>
-      <li>Deku Nuts Upgrade</li>
-      <li>Deku Shield</li>
-      <li>Deku Stick Upgrade</li>
-      <li>Din's Fire</li>
-      <li>Epona's Song</li>
-      <li>Ocarina</li>
-      <li>Farore's Wind</li>
-      <li>Fire Arrows</li>
-      <li>Fire Medallion</li>
-      <li>Forest Medallion</li>
-      <li>Gerudo Membership Card</li>
-      <li>Strength Upgrade</li>
-      <li>Goron's Ruby</li>
-      <li>Goron Tunic</li>
-      <li>Hookshot</li>
-      <li>Hover Boots</li>
-      <li>Hylian Shield</li>
-      <li>Ice Arrows</li>
-      <li>Iron Boots</li>
-      <li>Kokiri's Emerald</li>
-      <li>Kokiri Sword</li>
-      <li>Lens of Truth</li>
-      <li>Light Arrows</li>
-      <li>Light Medallion</li>
-      <li>Magic Beans</li>
-      <li>Magic Meter</li>
-      <li>Master Sword</li>
-      <li>Megaton Hammer</li>
-      <li>Minuet of Forest</li>
-      <li>Mirror Shield</li>
-      <li>Nayru's Love</li>
-      <li>Nocturne of Shadow</li>
-      <li>Ocarina Note</li>
-      <li>Prelude of Light</li>
-      <li>Requiem of Spirit</li>
-      <li>Saria's Song</li>
-      <li>Serenade of Water</li>
-      <li>Shadow Medallion</li>
-      <li>Scale</li>
-      <li>Slingshot</li>
-      <li>Song of Storms</li>
-      <li>Song of Time</li>
-      <li>Spirit Medallion</li>
-      <li>Stone of Agony</li>
-      <li>Sun's Song</li>
-      <li>Triforce Piece</li>
-      <li>Wallet Upgrade</li>
-      <li>Water Medallion</li>
-      <li>Zelda's Lullaby</li>
-      <li>Zora's Sapphire</li>
-      <li>Zora Tunic</li>
-      <li>Greg the Rupee</li>
-      <li>Double Defense</li>
-      <li>Bombchu Bag</li>
-      <li>Enemy Soul</li>
-      <li>Boss Soul</li>
-    </ul>
-
-    <h3>Mid Items (Keys and Silver Rupees)</h3>
-    <ul>
-      <li>Forest Temple Small Key</li>
-      <li>Fire Temple Small Key</li>
-      <li>Water Temple Small Key</li>
-      <li>Shadow Temple Small Key</li>
-      <li>Spirit Temple Small Key</li>
-      <li>Gerudo Fortress Small Key</li>
-      <li>Gerudo's Training Grounds Small Key</li>
-      <li>Ganon's Castle Small Key</li>
-      <li>Bottom of the Well Small Key</li>
-      <li>Treasure Game Small Key</li>
-      <li>Forest Temple Boss Key</li>
-      <li>Fire Temple Boss Key</li>
-      <li>Water Temple Boss Key</li>
-      <li>Shadow Temple Boss Key</li>
-      <li>Spirit Temple Boss Key</li>
-      <li>Shadow Temple Silver Rupee</li>
-      <li>Spirit Temple Silver Rupee</li>
-      <li>Bottom of the Well Silver Rupee</li>
-      <li>Ice Cavern Silver Rupee</li>
-      <li>Gerudo's Training Grounds Silver Rupee</li>
-      <li>Ganon's Castle Silver Rupee</li>
-    </ul>
-
-    <h3>Non-Key Items (Reusable)</h3>
-    <ul>
-      <li>Deku Sticks</li>
-      <li>Deku Nuts</li>
-      <li>Seeds</li>
-      <li>Arrows</li>
-      <li>Bombchu</li>
-      <li>Bombs</li>
-      <li>Magic Jar</li>
-      <li>Recovery Heart</li>
-      <li>Heart Piece</li>
-      <li>Heart Container</li>
-      <li>Skulltula Token</li>
-      <li>Milk</li>
-      <li>Red Potion</li>
-      <li>Blue Potion</li>
-      <li>Green Potion</li>
-      <li>Fairy</li>
-      <li>Blue Fire</li>
-      <li>Fish</li>
-      <li>Bug</li>
-      <li>Poe</li>
-      <li>Big Poe</li>
-      <li>Green Rupee</li>
-      <li>Blue Rupee</li>
-      <li>Red Rupee</li>
-      <li>Purple Rupee</li>
-      <li>Gold Rupee</li>
-      <li>Trap</li>
-    </ul>
+    <div class="command-section">
+      <h1>Game Commands</h1>
+      <table class="command-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Syntax</th>
+            <th>Example</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="command-name">!guess</span></td>
+            <td><code>!guess {itemName}</code> OR <code>!g {itemName}</code></td>
+            <td><code>!guess fire arrows</code></td>
+            <td><h4>Guess an item before it is obtained. You can change your guess after a one-minute cooldown.</h4></td>
+          </tr>
+          <tr>
+            <td><span class="command-name">!guessdungeon</span></td>
+            <td><code>!guessdungeon {thisDungeon}, {couldBeThisDungeon}</code> OR <br> <code>!gd {dungeon1} > {dungeon2}</code></td>
+            <td><code>!guessdungeon Forest Temple, Fire Temple</code></td>
+            <td><h4>Guess a dungeon entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points.
+              Dungeon names have to be separated by any of these characters: <i>[, = > : / | -]</i></h4>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="command-name">!guessboss</span></td>
+            <td><code>!guessboss {thisDungeon}, {couldHaveThisBoss}</code> OR <br> <code>!gb {dungeon1} > {dungeon2}</code></td>
+            <td><code>!guessboss Dodongo's Cavern, Bongo Bongo</code></td>
+            <td><h4>Guess a boss entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points.
+              Dungeon names have to be separated by any of these characters: <i>[, = > : / | -]</i></h4>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="command-name">!guesssong</span></td>
+            <td><code>!guesssong {thisSong}, {leadsToThisLocation}</code> OR <br> <code>!gs {song1} > {song2}</code></td>
+            <td><code>!guesssong Minuet, Nocturne</code></td>
+            <td><h4>Guess a song teleport location before it is found. You can guess this ALONGSIDE regular guesses for extra points.
+              Song names have to be separated by any of these characters: <i>[, = > : / | -]</i></h4>
+            </h4>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="command-name">!myguess</span></td>
+            <td><code>!myguess</code></td>
+            <td><code>!myguess</code></td>
+            <td><h4>Allows you to check your guess in case you forgot.</h4></td>
+          </tr>
+          <tr>
+            <td><span class="command-name">!myscore</span></td>
+            <td><code>!myscore</code></td>
+            <td><code>!myscore</code></td>
+            <td><h4>Allows you to check your score.</h4></td>
+          </tr>
+          <tr>
+            <td><span class="command-name">!random</span></td>
+            <td><code>!random</code></td>
+            <td><code>!random</code></td>
+            <td><h4>Randomly picks an item for you. Useful if you're new to the game!</h4></td>
+          </tr>
+          <tr>
+            <td><span class="command-name">!anonymous</span></td>
+            <td><code>!anonymous</code> OR <br> <code>!anonymous {newUsername}</code></td>
+            <td><code>!anonymous FakeName50</code></td>
+            <td><h4>Picks an anonymous name for you if you don't put one down for it to use instead. 
+              You can only change your anonymous name once every 24 hours, but can toggle it on/off at any time using the !anonymous command.</h4>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="command-name">!settext</span></td>
+            <td><code>!settext {winnerText}</code></td>
+            <td><code>!settext i won the game in ur face loser lol</code></td>
+            <td><h4>Allows you to pick your 1st place text if you win! This will ONLY appear if you win the game.</h4>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="items-section">
+      <h2>Guessable Items</h2>
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="item-search" placeholder="Search items by name or alias…" />
+      </div>
+      <table id="items-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Aliases</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </div>
 
   <script>
+    // Dark mode toggle script
     const toggleButton = document.getElementById('dark-mode-toggle');
   
     function enableDarkMode() {
       document.body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'enabled'); 
+      localStorage.setItem('darkMode', 'enabled');  
       toggleButton.textContent = "Light Mode";
     }
   
@@ -266,7 +299,89 @@
     });
   </script>
   
-    
-    
+  <script>
+    (async function() {
+      const itemsUrl = './oot_data/items.json';
+      console.log('Fetching items from:', itemsUrl);
+      let data;
+      try {
+        const res = await fetch(itemsUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        data = await res.json();
+      } catch (err) {
+        console.error('Failed to load items.json:', err);
+        return;
+      }
+      const keyItems = Array.isArray(data.key_items) ? data.key_items : [];
+      const midItems = Array.isArray(data.mid_items) ? data.mid_items : [];
+      const nonKeyItems = Array.isArray(data.non_key_items) ? data.non_key_items : [];
+      console.log(`Loaded items: key=${keyItems.length}, mid=${midItems.length}, non=${nonKeyItems.length}`);
+
+      const rawItems = [...keyItems, ...midItems, ...nonKeyItems];
+      const tbody = document.querySelector('#items-table tbody');
+      const searchInput = document.getElementById('item-search');
+
+      function render(list) {
+        tbody.innerHTML = '';
+        list.forEach((item, index) => {
+          if (!item || typeof item !== 'object') return;
+          
+          const tr = document.createElement('tr');
+          tr.style.animationDelay = `${index * 0.05}s`;
+          
+          const aliases = Array.isArray(item.aliases) ? item.aliases : [];
+          const amount = item.hasOwnProperty('amount') ? item.amount : '∞';
+          
+          tr.innerHTML = `
+            <td>${item.name || '(unnamed)'}</td>
+            <td style="text-align: center;">${amount}</td>
+            <td>${aliases.join(', ') || '-'}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        // If no items found, show a message
+        if (list.length === 0) {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td colspan="3" style="text-align: center; padding: 2rem;">
+              No items found matching your search
+            </td>
+          `;
+          tbody.appendChild(tr);
+        }
+      }
+
+      const allItems = rawItems.map(item => {
+        if (typeof item === 'string') {
+          return { name: item, amount: '∞', aliases: [] };
+        }
+        return {
+          name: item.name || '(no name)',
+          amount: item.hasOwnProperty('amount') ? item.amount : '∞',
+          aliases: Array.isArray(item.aliases) ? item.aliases : []
+        };
+      });
+      render(allItems);
+
+      let searchTimeout;
+      searchInput.addEventListener('input', e => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          const query = e.target.value.trim().toLowerCase();
+          const filtered = query === ''
+            ? allItems
+            : allItems.filter(item => {
+                if (!item || typeof item !== 'object') return false;
+                const nameMatch = (item.name || '').toLowerCase().includes(query);
+                const aliasMatch = Array.isArray(item.aliases) && 
+                  item.aliases.some(a => a.toLowerCase().includes(query));
+                return nameMatch || aliasMatch;
+              });
+          render(filtered);
+        }, 150);
+      });
+    })();
+  </script>
 </body>
 </html>

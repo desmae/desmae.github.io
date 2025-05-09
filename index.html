@@ -6,6 +6,97 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero-section {
+      text-align: center;
+      padding: 2rem 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInDown 0.8s ease forwards;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 154, 158, 0.5)); }
+      50% { filter: drop-shadow(0 0 20px rgba(255, 154, 158, 0.8)); }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .description {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards 0.5s;
+    }
+
+    .highlight {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1.5rem;
+      margin: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid var(--accent-color);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 154, 158, 0.3);
+      background: var(--accent-color);
+      color: white;
+    }
+
+    .social-link svg {
+      margin-right: 0.5rem;
+      fill: currentColor;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards 1s;
+    }
+
+    body.dark-mode .footer {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -21,18 +112,36 @@
   </nav>
   
   <div class="container">
-    <h1>Guess That Item Chatbot</h1>
-    <p>
-      The Guess That Item Chat Bot (GTI Chat Bot) is currently being developed by me (Desmae) for people who want to engage their chat during Zelda: Ocarina of Time randomizer runs. 
-      Viewers can guess upcoming items, earn points when they're right, and compete on a live leaderboard displayed in OBS. 
-      Mods can log obtained items manually with commands, and all progress persists between streams. 
-      It is currently in a closed alpha, and is expected be released to the public some time in 2025. 
-      To follow and support development, visit <strong><u><a href="https://www.youtube.com/@desmae/featured">my YouTube channel</a></u></strong> 
-      and keep an eye out for upcoming test streams where you can participate as a viewer!
-    </p>
-    <br>
-    <p>Last updated: 2025-04-16 // V2</p>
-    <h6>Desmae 2025 (C). Not affiliated with Nintendo.</h6>
+    <div class="hero-section">
+      <h1 class="hero-title">Guess That Item Chat Bot</h1>
+      <div class="description">
+        <p>
+          The <span class="highlight">Guess That Item Chat Bot (GTI Chat Bot)</span> is currently being developed by me (Desmae) 
+          for people who want to engage their chat during Zelda: Ocarina of Time randomizer runs. 
+          Viewers can guess upcoming items, earn points when they're right, and compete on a live leaderboard displayed in OBS.
+        </p>
+        <p>
+          Mods can log obtained items manually with commands, and all progress persists between streams. 
+          It is currently in a closed alpha, and is expected be released to the public some time in 2025.
+        </p>
+        <p>
+          To follow and support development, visit my YouTube channel and keep an eye out for upcoming test streams 
+          where you can participate as a viewer!
+        </p>
+        
+        <a href="https://www.youtube.com/@desmae/featured" class="social-link" target="_blank" rel="noopener noreferrer">
+          <svg height="20" width="20" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          Visit YouTube Channel
+        </a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Last updated: 2025-05-09 <span class="version-tag">Alpha 4</span></p>
+      <p>Desmae 2025 (C). Not affiliated with Nintendo.</p>
+    </footer>
   </div>
   
   <script>
@@ -62,7 +171,5 @@
       }
     });
   </script>
-  
 </body>
-
 </html>

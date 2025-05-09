@@ -5,30 +5,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teaser: Upcoming Exciting Features</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .teaser-container {
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      color: inherit;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .coming-soon {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 154, 158, 0.5)); }
+      50% { filter: drop-shadow(0 0 20px rgba(255, 154, 158, 0.8)); }
+    }
+
+    .teaser-list {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    .teaser-item {
+      background: rgba(255, 255, 255, 0.8);
+      margin: 1rem 0;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transform: translateY(50px);
+      opacity: 0;
+      animation: slideUp 0.5s ease forwards;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      color: #333;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .teaser-item::before {
+      content: '🎮';
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .teaser-item:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .teaser-item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: 0.5s;
+    }
+
+    .teaser-item:hover::after {
+      left: 100%;
+    }
+
+    .teaser-item:nth-child(1) { animation-delay: 0.2s; }
+    .teaser-item:nth-child(2) { animation-delay: 0.4s; }
+    .teaser-item:nth-child(3) { animation-delay: 0.6s; }
+    .teaser-item:nth-child(4) { animation-delay: 0.8s; }
+    .teaser-item:nth-child(5) { animation-delay: 1s; }
+
+    .mystery {
+      font-style: italic;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .dots {
+      display: inline-block;
+    }
+
+    .dots::after {
+      content: '...';
+      animation: dots 2s infinite;
+    }
+
+    @keyframes dots {
+      0%, 20% { content: '...'; }
+      40% { content: ''; }
+      60% { content: '.'; }
+      80% { content: '..'; }
+      100% { content: '...'; }
+    }
+
+    /* Dark mode overrides */
+    body.dark-mode .teaser-item {
+      background: rgba(42, 42, 42, 0.9);
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .teaser-item:hover {
+      background: rgba(52, 52, 52, 0.9);
+    }
+
+    body.dark-mode p {
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .coming-soon {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">GTI Chat Bot</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="commands.html">Commands</a></li>
-          <li><a href="features.html">New Features</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="teaser.html">Upcoming</a></li>
-          <li><button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button></li>
-        </ul>
-      </nav>
-  <div class="container">
-    <h1>Coming Soon: Next Update Teaser!</h1>
-    <p>Here’s a sneak peek at what’s coming your way:</p>
-    <ul>
-      <li>Song teleport randomization!</li>
-      <li>Streak indicator on the leaderboard!</li>
-      <li>Anonymous users have any sensitive info deleted within 10 seconds if it is in chat.</li>
-      <li>Tied leaderboard positions...</li>
-      <li>...And way more...</li>
+  <nav class="navbar">
+    <div class="logo">GTI Chat Bot</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="commands.html">Commands</a></li>
+      <li><a href="features.html">New Features</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+      <li><a href="teaser.html">Upcoming</a></li>
+      <li><button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button></li>
     </ul>
+  </nav>
+
+  <div class="container">
+    <div class="teaser-container">
+      <h1 class="coming-soon">Coming Soon: Next Update Teaser!</h1>
+      <p>Here's a sneak peek at what's coming your way:</p>
+
+      <ul class="teaser-list">
+        <li class="teaser-item">Winners tab on this website... Be the winner, permanently!</li>
+        <li class="teaser-item">Majora's Mask is just around the corner...</li>
+        <li class="teaser-item">On-screen UI update... What could this mean...?</li>
+        <li class="teaser-item">And way more<span class="dots"></span> <span class="mystery">mysteries await!</span></li>
+      </ul>
+    </div>
   </div>
+
   <script>
     const toggleButton = document.getElementById('dark-mode-toggle');
   
@@ -57,5 +197,4 @@
     });
   </script>
 </body>
-
 </html>

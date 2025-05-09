@@ -5,6 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Changelog</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .card {
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .arrow {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+      color: var(--text-light);
+    }
+
+    .card-header h3 {
+      color: var(--text-light);
+      margin: 0;
+      font-weight: 600;
+    }
+    
+    .card.active .arrow {
+      transform: rotate(90deg);
+    }
+    
+    .card-content {
+      padding: 0 1rem;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--text-light);
+    }
+    
+    .card.active .card-content {
+      opacity: 1;
+      transform: translateY(0);
+      padding: 1rem;
+    }
+    
+    .update-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      background: #333;
+      color: #fff;
+      font-weight: 600;
+      margin-left: 1rem;
+      box-shadow: 0 2px 8px rgba(255, 154, 158, 0.3);
+    }
+    
+    .card:hover .update-badge {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 154, 158, 0.4);
+    }
+
+    body.dark-mode .arrow,
+    body.dark-mode .card-content {
+      color: var(--text-dark);
+    }
+
+    body.dark-mode .card-header h3 {
+      color: var(--text-dark);
+    }
+
+    body.dark-mode .card {
+      background: rgba(42, 42, 42, 0.95);
+    }
+
+    body.dark-mode .update-badge {
+      background: #fff;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
     <nav class="navbar">
@@ -21,6 +91,28 @@
   <div class="container">
     <h1>Changelog</h1>
     
+    <div class="card" id="updateAlpha4">
+      <div class="card-header" onclick="toggleCard('updateAlpha4')">
+        <h3>Alpha 4 <span class="update-badge">Latest</span></h3>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="card-content">
+        <p>
+            Here comes Alpha 4! This update introduces a couple of new features and improvements to enhance your experience:
+        </p>
+        <ul>
+            <li>Song Teleport Randomization! Allows you to guess what OoT song will lead to which location. See its use <a href="commands.html"><b><u>here!</u></b></a></li>
+            <li>Message updates... The chat bot will now send additional messages properly instead of processing them and not providing feedback sometimes.</li>
+            <li>Win Screen!!! At the end of the randomizer, the top three players will be displayed on screen, with the player in first having special text (!settext Yippee! I won!)</li>
+            <li>The item list on this website is updated and has a better UI! Use the search bar to look for specific items!</li>
+            <li>Tied Leaderboard Positions! If you're sharing first place with someone, you both get a gold outline!!!</li>
+            <li>Streak indicator for the leaderboard! Show off your guessing skills with a visible fire icon next to your name on the leaderboard!</li>
+            <li>Fixed some bugs...</li>
+            <li>Backend optimizations</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="card" id="updateAlpha3">
       <div class="card-header" onclick="toggleCard('updateAlpha3')">
         <h3>Alpha 3</h3>
@@ -93,11 +185,18 @@
   </div>
   <script>
     function toggleCard(cardId) {
-      var card = document.getElementById(cardId);
-      card.classList.toggle('active');
+      const cards = document.querySelectorAll('.card');
+      const clickedCard = document.getElementById(cardId);
+      
+      cards.forEach(card => {
+        if (card.id !== cardId) {
+          card.classList.remove('active');
+        }
+      });
+      
+      clickedCard.classList.toggle('active');
     }
-  </script>
-  <script>
+    
     const toggleButton = document.getElementById('dark-mode-toggle');
   
     function enableDarkMode() {
@@ -122,6 +221,10 @@
       } else {
         enableDarkMode();
       }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      toggleCard('updateAlpha3');
     });
   </script>
 </body>

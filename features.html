@@ -3,44 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Features - Alpha 2 Update</title>
+  <title>New Features - Alpha 3 Update</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-item {
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: slideInFeature 0.5s ease forwards;
+      background: rgba(255, 255, 255, 0.95);
+      margin: 1rem 0;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: var(--text-light);
+    }
+
+    .feature-item::before {
+      content: "✨";
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .feature-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes slideInFeature {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .feature-item:nth-child(1) { animation-delay: 0.1s; }
+    .feature-item:nth-child(2) { animation-delay: 0.2s; }
+    .feature-item:nth-child(3) { animation-delay: 0.3s; }
+    .feature-item:nth-child(4) { animation-delay: 0.4s; }
+    .feature-item:nth-child(5) { animation-delay: 0.5s; }
+    .feature-item:nth-child(6) { animation-delay: 0.6s; }
+    .feature-item:nth-child(7) { animation-delay: 0.7s; }
+    .feature-item:nth-child(8) { animation-delay: 0.8s; }
+    .feature-item:nth-child(9) { animation-delay: 0.9s; }
+    .feature-item:nth-child(10) { animation-delay: 1s; }
+    .feature-item:nth-child(11) { animation-delay: 1.1s; }
+
+    .update-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      background: #333;
+      color: #fff;
+      font-weight: 600;
+      margin-left: 1rem;
+      box-shadow: 0 2px 8px rgba(255, 154, 158, 0.3);
+      animation: pulse 2s infinite;
+    }
+
+    body.dark-mode .update-badge {
+      background: #fff;
+      color: #333;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); filter: drop-shadow(0 2px 8px rgba(255, 154, 158, 0.3)); }
+      50% { transform: scale(1.05); filter: drop-shadow(0 4px 12px rgba(255, 154, 158, 0.4)); }
+      100% { transform: scale(1); filter: drop-shadow(0 2px 8px rgba(255, 154, 158, 0.3)); }
+    }
+
+    /* Dark mode overrides */
+    body.dark-mode .feature-item {
+      background: rgba(42, 42, 42, 0.9);
+      color: var(--text-dark);
+    }
+
+    body.dark-mode .feature-item:hover {
+      background: rgba(52, 52, 52, 0.9);
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInDown 0.5s ease forwards;
+    }
+
+    .header-section h1, .header-section h2 {
+      color: var(--text-light);
+    }
+
+    body.dark-mode .header-section,
+    body.dark-mode .header-section h1,
+    body.dark-mode .header-section h2 {
+      color: var(--text-dark);
+    }
+
+    @keyframes fadeInDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .bug-fix {
+      border-left: 3px solid #4CAF50;
+    }
+
+    .bug-fix::before {
+      content: "🐛";
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">GTI Chat Bot</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="commands.html">Commands</a></li>
-          <li><a href="features.html">New Features</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="teaser.html">Upcoming</a></li>
-          <li><button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button></li>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <div class="logo">GTI Chat Bot</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="commands.html">Commands</a></li>
+      <li><a href="features.html">New Features</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+      <li><a href="teaser.html">Upcoming</a></li>
+      <li><button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button></li>
+    </ul>
+  </nav>
+
   <div class="container">
-    <h1>New Features</h1>
-    <h2>Update: <span class="update-name">Alpha 3</span></h2>
-    <p>
-      Welcome to the Alpha 3 update! Here are the awesome new features:
-  </p>
-  <ul>
-      <li>!random allows you to randomly choose an item if you are not familiar with a particular randomizer.</li>
-      <li>Dungeon and Boss room guesser, see its use <strong><u><a href="commands.html">here</a></u></strong>.</li>
-      <li>!anonymous allows you to give yourself an anonymous name. (Custom names only work once every 24 hours.)</li>
-      <li>Guessing correctly consecutively will give you a streak! Streaks multiply your points up to 5x!</li>
-      <li>Guess Auto-Lock: If you guessed an item that still has an amount left to it, you will automatically lock it in again, 
-        AND still be able to choose a new item.</li>
-      <li>Commonly used commands now have abbreviations! (i.e: !guess = !g, !guessdungeon = !gd, !guessboss = !gb)</li>
-      <li>!myscore will allow you to check your score.</li>
-      <li>Enemy Soul & Boss Souls can be guessed now.</li>
-      <li>The leaderboard's been updated with better text, removed background, and colors for 2nd and 3rd place.</li>
-      <li>Typing in some commands without a subject (i.e: !guess) will give a quick usage tutorial.</li>
-      <li>[FIXED BUG]: !myguess didn't display player's guesses properly.</li>
+    <div class="header-section">
+      <h1>New Features</h1>
+      <h2>Update: <span class="update-badge">Alpha 4</span></h2>
+      <p>
+        Here comes Alpha 4! This update introduces a couple of new features and improvements to enhance your experience:
+    </p>
+    </div>
+    <ul class="feature-list">
+      <li class="feature-item">Song Teleport Randomization! Allows you to guess what OoT song will lead to which location. See its use <a href="commands.html"><b><u>here!</u></b></a></li>
+      <li class="feature-item">Message updates... The chat bot will now send additional messages properly instead of processing them and not providing feedback sometimes.</li>
+      <li class="feature-item">Win Screen!!! At the end of the randomizer, the top three players will be displayed on screen, with the player in first having special text (!settext Yippee! I won!)</li>
+      <li class="feature-item">The item list on this website is updated and has a better UI! Use the search bar to look for specific items!</li>
+      <li class="feature-item">Tied Leaderboard Positions! If you're sharing first place with someone, you both get a gold outline!!!</li>
+      <li class="feature-item">Streak indicator for the leaderboard! Show off your guessing skills with a visible fire icon next to your name on the leaderboard!</li>
+      <li class="bug-fix">Fixed some bugs...</li>
+      <li class="bug-fix">Backend optimizations</li>
   </ul>
-      
-    
   </div>
+
   <script>
     const toggleButton = document.getElementById('dark-mode-toggle');
   

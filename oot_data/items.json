@@ -3,409 +3,960 @@
     {
       "name": "Adult Trade Sequence Item",
       "amount": 11,
-      "aliases": ["Claim Check", "Pocket Egg", "Pocket Cucco", "Cojiro", "Broken Giant's Knife", 
-      "Broken Goron's Sword", "Broken Sword", "Broken Knife", "Knife", "Giant's Knife", "Blue Cucco", "Odd Mushroom", 
-      "Odd Poultice", "Odd Potion", "Saw", "Poacher's Saw", "Prescription", "Doctor's Note", "Eyeball Frog", "Frog", "Eyedrops", "Eye Drops", "Drops"]
+      "aliases": [
+        "Claim Check",
+        "Pocket Egg",
+        "Pocket Cucco",
+        "Cojiro",
+        "Broken Giant's Knife",
+        "Broken Goron's Sword",
+        "Broken Sword",
+        "Broken Knife",
+        "Knife",
+        "Giant's Knife",
+        "Blue Cucco",
+        "Odd Mushroom",
+        "Odd Poultice",
+        "Odd Potion",
+        "Saw",
+        "Poacher's Saw",
+        "Prescription",
+        "Doctor's Note",
+        "Eyeball Frog",
+        "Frog",
+        "Eyedrops",
+        "Eye Drops",
+        "Drops"
+      ],
+      "ids": [
+        14,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ]
     },
     {
       "name": "Child Trade Sequence Item",
       "amount": 10,
-      "aliases": ["Weird Egg", "Zelda's Letter", "Keaton Mask", "Skull Mask", "Spooky Mask", "Bunny Hood", "Goron Mask", "Zora Mask", "Gerudo Mask", "Mask of Truth"]
+      "aliases": [
+        "Weird Egg",
+        "Zelda's Letter",
+        "Keaton Mask",
+        "Skull Mask",
+        "Spooky Mask",
+        "Bunny Hood",
+        "Goron Mask",
+        "Zora Mask",
+        "Gerudo Mask",
+        "Mask of Truth"
+      ],
+      "ids": [
+        71,
+        28,
+        23,
+        24,
+        25,
+        26,
+        27,
+        18,
+        19,
+        20
+      ]
     },
     {
       "name": "Biggoron's Sword",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        87
+      ]
     },
     {
       "name": "Bolero of Fire",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        188
+      ]
     },
     {
       "name": "Bomb Bag",
-      "amount": 3
+      "amount": 3,
+      "ids": [
+        50,
+        51,
+        82
+      ]
     },
     {
       "name": "Boomerang",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        6
+      ]
     },
     {
       "name": "Bottle",
       "amount": 6,
-      "aliases": ["Ruto's Letter"]
+      "aliases": [
+        "Ruto's Letter"
+      ],
+      "ids": [
+        15
+      ]
     },
     {
       "name": "Bow",
       "amount": 1,
-      "aliases": ["Fairy Bow"]
+      "aliases": [
+        "Fairy Bow"
+      ],
+      "ids": [
+        4,
+        59,
+        90
+      ]
     },
     {
       "name": "Deku Nuts Upgrade",
-      "amount": 3
+      "amount": 3,
+      "ids": [
+        99,
+        154
+      ]
     },
     {
       "name": "Deku Shield",
-      "amount": 10
+      "amount": 10,
+      "ids": [
+        41
+      ]
     },
     {
       "name": "Deku Stick Upgrade",
-      "amount": 3
+      "amount": 3,
+      "ids": [
+        97,
+        153
+      ]
     },
     {
       "name": "Din's Fire",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        92
+      ]
     },
     {
       "name": "Epona's Song",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        194
+      ]
     },
     {
       "name": "Ocarina",
       "amount": 2,
-      "aliases": ["Fairy Ocarina", "Ocarina of Time"]
+      "aliases": [
+        "Fairy Ocarina",
+        "Ocarina of Time"
+      ],
+      "ids": [
+        12,
+        59,
+        139
+      ]
     },
     {
       "name": "Farore's Wind",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        93
+      ]
     },
     {
       "name": "Fire Arrows",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        88
+      ]
     },
     {
       "name": "Fire Medallion",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        300
+      ]
     },
     {
       "name": "Forest Medallion",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        299
+      ]
     },
     {
       "name": "Gerudo Membership Card",
       "amount": 1,
-      "aliases": ["Gerudo Card"]
+      "aliases": [
+        "Gerudo Card"
+      ],
+      "ids": [
+        58
+      ]
     },
     {
       "name": "Strength Upgrade",
       "amount": 3,
-      "aliases": ["Goron's Bracelet", "Silver Gauntlets", "Gold Gauntlets", "Gauntlets"]
+      "aliases": [
+        "Goron's Bracelet",
+        "Silver Gauntlets",
+        "Gold Gauntlets",
+        "Gauntlets"
+      ],
+      "ids": [
+        83,
+        84,
+        85
+      ]
     },
     {
       "name": "Goron's Ruby",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        89
+      ]
     },
     {
       "name": "Goron Tunic",
       "amount": 5,
-      "aliases": ["Red Tunic"]
+      "aliases": [
+        "Red Tunic"
+      ],
+      "ids": [
+        44
+      ]
     },
     {
       "name": "Hookshot",
       "amount": 2,
-      "aliases": ["Grappling Hook", "Clawshot"]
+      "aliases": [
+        "Grappling Hook",
+        "Clawshot"
+      ],
+      "ids": [
+        8,
+        9,
+        128
+      ]
     },
     {
       "name": "Hover Boots",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        47
+      ]
     },
     {
       "name": "Hylian Shield",
-      "amount": 5
+      "amount": 5,
+      "ids": [
+        42
+      ]
     },
     {
       "name": "Ice Arrows",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        89
+      ]
     },
     {
       "name": "Iron Boots",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        46
+      ]
     },
     {
       "name": "Kokiri's Emerald",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        151
+      ]
     },
     {
       "name": "Kokiri Sword",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        39
+      ]
     },
     {
       "name": "Lens of Truth",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        10
+      ]
     },
     {
       "name": "Light Arrows",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        90
+      ]
     },
     {
       "name": "Light Medallion",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        154
+      ]
     },
     {
       "name": "Magic Beans",
-      "amount": 10
+      "amount": 10,
+      "ids": [
+        22
+      ]
     },
     {
       "name": "Magic Meter",
       "amount": 2,
-      "aliases": ["Magic Upgrade"]
+      "aliases": [
+        "Magic Upgrade"
+      ],
+      "ids": [
+        185
+      ]
     },
     {
       "name": "Master Sword",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        40
+      ]
     },
     {
       "name": "Megaton Hammer",
       "amount": 1,
-      "aliases": ["Hammer"]
+      "aliases": [
+        "Hammer"
+      ],
+      "ids": [
+        13
+      ]
     },
     {
       "name": "Minuet of Forest",
       "amount": 1,
-      "aliases": ["Forest Song"]
+      "aliases": [
+        "Forest Song"
+      ],
+      "ids": [
+        187
+      ]
     },
     {
       "name": "Mirror Shield",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        43
+      ]
     },
     {
       "name": "Nayru's Love",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        94
+      ]
     },
     {
       "name": "Nocturne of Shadow",
       "amount": 1,
-      "aliases": ["Shadow Song"]
+      "aliases": [
+        "Shadow Song"
+      ],
+      "ids": [
+        189
+      ]
     },
     {
       "name": "Ocarina Note",
       "amount": "5",
-      "aliases": ["Ocarina Button"]
+      "aliases": [
+        "Ocarina Button"
+      ],
+      "ids": [
+        260,
+        261,
+        262,
+        263,
+        264
+      ]
     },
     {
       "name": "Prelude of Light",
       "amount": 1,
-      "aliases": ["Light Song"]
+      "aliases": [
+        "Light Song"
+      ],
+      "ids": [
+        188
+      ]
     },
     {
       "name": "Requiem of Spirit",
       "amount": 1,
-      "aliases": ["Spirit Song"]
+      "aliases": [
+        "Spirit Song"
+      ],
+      "ids": [
+        190
+      ]
     },
     {
       "name": "Saria's Song",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        191
+      ]
     },
     {
       "name": "Serenade of Water",
       "amount": 1,
-      "aliases": ["Water Song"]
+      "aliases": [
+        "Water Song"
+      ],
+      "ids": [
+        192
+      ]
     },
     {
       "name": "Shadow Medallion",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        153
+      ]
     },
     {
       "name": "Scale",
       "amount": 3,
-      "aliases": ["Bronze Scale", "Silver Scale", "Golden Scale", "Gold Scale"]
+      "aliases": [
+        "Bronze Scale",
+        "Silver Scale",
+        "Golden Scale",
+        "Gold Scale"
+      ],
+      "ids": [
+        83,
+        84
+      ]
     },
     {
       "name": "Slingshot",
       "amount": 3,
-      "aliases": ["Seed Bag", "Seed Upgrade", "Slingshot Upgrade"]
+      "aliases": [
+        "Seed Bag",
+        "Seed Upgrade",
+        "Slingshot Upgrade"
+      ],
+      "ids": [
+        5
+      ]
     },
     {
       "name": "Song of Storms",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        198
+      ]
     },
     {
       "name": "Song of Time",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        197
+      ]
     },
     {
       "name": "Spirit Medallion",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        156
+      ]
     },
     {
       "name": "Stone of Agony",
       "amount": 1,
-      "aliases": ["Shard of Agony", "Agony Stone", "Agony Shard"]
+      "aliases": [
+        "Shard of Agony",
+        "Agony Stone",
+        "Agony Shard"
+      ],
+      "ids": [
+        57
+      ]
     },
     {
       "name": "Sun's Song",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        193
+      ]
     },
     {
       "name": "Triforce Piece",
-      "amount": 100
+      "amount": 100,
+      "ids": [
+        202
+      ]
     },
     {
       "name": "Wallet Upgrade",
       "amount": 4,
-      "aliases": ["Child's Wallet", "Wallet", "Adult's Wallet", "Giant's Wallet", "Tycoon Wallet"]
+      "aliases": [
+        "Child's Wallet",
+        "Wallet",
+        "Adult's Wallet",
+        "Giant's Wallet",
+        "Tycoon Wallet"
+      ],
+      "ids": [
+        69,
+        70
+      ]
     },
     {
       "name": "Water Medallion",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        302
+      ]
     },
     {
       "name": "Zelda's Lullaby",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        201
+      ]
     },
     {
       "name": "Zora's Sapphire",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        152
+      ]
     },
     {
       "name": "Zora Tunic",
       "amount": 1,
-      "aliases": ["Blue Tunic"]
+      "aliases": [
+        "Blue Tunic"
+      ],
+      "ids": [
+        45
+      ]
     },
     {
       "name": "Greg the Rupee",
       "amount": 20,
-      "aliases": ["Greg"]
+      "aliases": [
+        "Greg"
+      ],
+      "ids": [
+        86
+      ]
     },
     {
       "name": "Double Defense",
       "amount": 1,
-      "aliases": ["Defense", "Double HP", "Double Health"]
+      "aliases": [
+        "Defense",
+        "Double HP",
+        "Double Health"
+      ],
+      "ids": [
+        184
+      ]
     },
     {
       "name": "Bombchu Bag",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        150,
+        151,
+        154
+      ]
     },
     {
       "name": "Enemy Soul",
-      "amount": 1
+      "amount": 1,
+      "ids": []
     },
     {
       "name": "Boss Soul",
-      "amount": 1
+      "amount": 1,
+      "ids": []
     }
   ],
   "mid_items": [
     {
       "name": "Forest Temple Small Key",
       "amount": 5,
-      "aliases": ["Forest Temple Key"]
+      "aliases": [
+        "Forest Temple Key"
+      ],
+      "ids": [
+        175
+      ]
     },
     {
       "name": "Fire Temple Small Key",
       "amount": 8,
-      "aliases": ["Fire Temple Key"]
+      "aliases": [
+        "Fire Temple Key"
+      ],
+      "ids": [
+        176
+      ]
     },
     {
       "name": "Water Temple Small Key",
       "amount": 6,
-      "aliases": ["Water Temple Key"]
+      "aliases": [
+        "Water Temple Key"
+      ],
+      "ids": [
+        177
+      ]
     },
     {
       "name": "Shadow Temple Small Key",
       "amount": 5,
-      "aliases": ["Shadow Temple Key"]
+      "aliases": [
+        "Shadow Temple Key"
+      ],
+      "ids": [
+        178
+      ]
     },
     {
       "name": "Spirit Temple Small Key",
       "amount": 5,
-      "aliases": ["Spirit Temple Key"]
+      "aliases": [
+        "Spirit Temple Key"
+      ],
+      "ids": [
+        179
+      ]
     },
     {
       "name": "Gerudo Fortress Small Key",
       "amount": 4,
-      "aliases": ["Gerudo Fortress Key"]
+      "aliases": [
+        "Gerudo Fortress Key"
+      ],
+      "ids": [
+        180
+      ]
     },
     {
       "name": "Gerudo's Training Grounds Small Key",
       "amount": 9,
-      "aliases": ["Gerudo's Traning Grounds Key", "GTG Key", "Training Grounds Key", "Training Grounds Small Key", "Grounds Small Key", "Grounds Key"]
+      "aliases": [
+        "Gerudo's Traning Grounds Key",
+        "GTG Key",
+        "Training Grounds Key",
+        "Training Grounds Small Key",
+        "Grounds Small Key",
+        "Grounds Key"
+      ],
+      "ids": [
+        181
+      ]
     },
     {
       "name": "Ganon's Castle Small Key",
       "amount": 2,
-      "aliases": ["Ganon's Castle Key"]
+      "aliases": [
+        "Ganon's Castle Key"
+      ],
+      "ids": [
+        183
+      ]
     },
     {
       "name": "Bottom of the Well Small Key",
       "amount": 3,
-      "aliases": ["Bottom of the Well Key"]
+      "aliases": [
+        "Bottom of the Well Key"
+      ],
+      "ids": [
+        182
+      ]
     },
     {
       "name": "Treasure Game Small Key",
       "amount": 10,
-      "aliases": ["Treasure Game Key"]
+      "aliases": [
+        "Treasure Game Key"
+      ],
+      "ids": [
+        17
+      ]
     },
     {
       "name": "Forest Temple Boss Key",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        149
+      ]
     },
     {
       "name": "Fire Temple Boss Key",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        150
+      ]
     },
     {
       "name": "Water Temple Boss Key",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        151
+      ]
     },
     {
       "name": "Shadow Temple Boss Key",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        152
+      ]
     },
     {
       "name": "Spirit Temple Boss Key",
-      "amount": 1
+      "amount": 1,
+      "ids": [
+        153
+      ]
     },
     {
       "name": "Shadow Temple Silver Rupee",
-      "amount": 20
+      "amount": 20,
+      "ids": [220, 221, 222, 223]
     },
     {
       "name": "Spirit Temple Silver Rupee",
-      "amount": 20
+      "amount": 20,
+      "ids": [227, 228, 229, 230, 231]
     },
     {
       "name": "Bottom of the Well Silver Rupee",
-      "amount": 20
+      "amount": 20,
+      "ids": [219]
     },
     {
       "name": "Ice Cavern Silver Rupee",
-      "amount": 20
+      "amount": 20,
+      "ids": [217, 218]
     },
     {
       "name": "Gerudo's Training Grounds Silver Rupee",
-      "amount": 20
+      "amount": 20,
+      "ids": [224, 225, 226]
     },
     {
       "name": "Ganon's Castle Silver Rupee",
-      "amount": 20
+      "amount": 20,
+      "ids": [232, 233, 234, 235, 236, 237]
     }
   ],
   "non_key_items": [
-    "Deku Sticks",
-    "Deku Nuts",
-    "Seeds",
-    "Arrows",
-    "Bombchu",
-    "Bombs",
-    "Magic Jar",
-    "Recovery Heart",
-    "Heart Piece",
-    "Heart Container",
-    "Skulltula Token",
-    "Milk",
-    "Red Potion",
-    "Blue Potion",
-    "Green Potion",
-    "Fairy",
-    "Blue Fire",
-    "Fish",
-    "Bug",
-    "Poe",
-    "Big Poe",
-    "Green Rupee",
-    "Blue Rupee",
-    "Red Rupee",
-    "Purple Rupee",
-    "Gold Rupee",
-    "Trap"
+    {
+      "name": "Deku Sticks",
+      "ids": [
+        7,
+        97,
+        155
+      ]
+    },
+    {
+      "name": "Deku Nuts",
+      "ids": [
+        2,
+        99,
+        154
+      ]
+    },
+    {
+      "name": "Seeds",
+      "ids": [
+        60,
+        97
+      ]
+    },
+    {
+      "name": "Arrows",
+      "ids": [
+        73,
+        74,
+        75
+      ]
+    },
+    {
+      "name": "Bombchu",
+      "ids": [
+        3,
+        106,
+        107
+      ]
+    },
+    {
+      "name": "Bombs",
+      "ids": [
+        1,
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    {
+      "name": "Magic Jar",
+      "ids": [
+        67,
+        68
+      ]
+    },
+    {
+      "name": "Recovery Heart",
+      "aliases": ["Heart"],
+      "ids": [
+        72
+      ]
+    },
+    {
+      "name": "Heart Piece",
+      "aliases": ["Piece", "HP", "Piece of Heart", "Piece Heart"],
+      "ids": [
+        61,
+        66,
+        77
+      ]
+    },
+    {
+      "name": "Heart Container",
+      "aliases": ["Container", "HC"],
+      "ids": [
+        61,
+        77
+      ]
+    },
+    {
+      "name": "Skulltula Token",
+      "aliases": ["Token", "Skulltula", "GS", "GST"],
+      "ids": [
+        91
+      ]
+    },
+    {
+      "name": "Milk",
+      "ids": [
+        20,
+        80,
+        81
+      ]
+    },
+    {
+      "name": "Red Potion",
+      "ids": [
+        16
+      ]
+    },
+    {
+      "name": "Blue Potion",
+      "ids": [
+        18
+      ]
+    },
+    {
+      "name": "Green Potion",
+      "ids": [
+        17
+      ]
+    },
+    {
+      "name": "Fairy",
+      "ids": [
+        19
+      ]
+    },
+    {
+      "name": "Blue Fire",
+      "ids": [
+        109
+      ]
+    },
+    {
+      "name": "Fish",
+      "ids": [
+        108
+      ]
+    },
+    {
+      "name": "Bug",
+      "ids": [
+        110
+      ]
+    },
+    {
+      "name": "Poe",
+      "ids": [
+        111
+      ]
+    },
+    {
+      "name": "Big Poe",
+      "ids": [
+        112
+      ]
+    },
+    {
+      "name": "Green Rupee",
+      "ids": [
+        76
+      ]
+    },
+    {
+      "name": "Blue Rupee",
+      "ids": [
+        77
+      ]
+    },
+    {
+      "name": "Red Rupee",
+      "ids": [
+        78
+      ]
+    },
+    {
+      "name": "Purple Rupee",
+      "ids": [85]
+    },
+    {
+      "name": "Gold Rupee",
+      "ids": [86]
+    },
+    {
+      "name": "Trap",
+      "aliases": ["Ice Trap"],
+      "ids": [124]
+    }
   ]
 }
