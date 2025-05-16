@@ -33,7 +33,14 @@
         transform: translateY(0);
       }
     }
+    .table-container {
+      overflow-x: auto;
+      width: 100%;
+    }
 
+    .command-table {
+      min-width: 600px;
+    }
     /* Search bar improvements */
     .search-container {
       position: relative;
@@ -185,33 +192,22 @@
         <tbody>
           <tr>
             <td><span class="command-name">!guess</span></td>
-            <td><code>!guess {itemName}</code> OR <code>!g {itemName}</code></td>
+            <td><code>!guess {item}</code> OR <code>!g {item}</code></td>
             <td><code>!guess fire arrows</code></td>
             <td><h4>Guess an item before it is obtained. You can change your guess after a one-minute cooldown.</h4></td>
           </tr>
           <tr>
             <td><span class="command-name">!guessdungeon</span></td>
-            <td><code>!guessdungeon {thisDungeon}, {couldBeThisDungeon}</code> OR <br> <code>!gd {dungeon1} > {dungeon2}</code></td>
-            <td><code>!guessdungeon Forest Temple, Fire Temple</code></td>
-            <td><h4>Guess a dungeon entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points.
-              Dungeon names have to be separated by any of these characters: <i>[, = > : / | -]</i></h4>
+            <td><code>!guessdungeon {dungeon}</code> OR <br> <code>!gd {dungeon}</code></td>
+            <td><code>!guessdungeon Fire Temple</code></td>
+            <td><h4>Guess a dungeon entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points. (30 min cooldown)
             </td>
           </tr>
           <tr>
             <td><span class="command-name">!guessboss</span></td>
-            <td><code>!guessboss {thisDungeon}, {couldHaveThisBoss}</code> OR <br> <code>!gb {dungeon1} > {dungeon2}</code></td>
-            <td><code>!guessboss Dodongo's Cavern, Bongo Bongo</code></td>
-            <td><h4>Guess a boss entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points.
-              Dungeon names have to be separated by any of these characters: <i>[, = > : / | -]</i></h4>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="command-name">!guesssong</span></td>
-            <td><code>!guesssong {thisSong}, {leadsToThisLocation}</code> OR <br> <code>!gs {song1} > {song2}</code></td>
-            <td><code>!guesssong Minuet, Nocturne</code></td>
-            <td><h4>Guess a song teleport location before it is found. You can guess this ALONGSIDE regular guesses for extra points.
-              Song names have to be separated by any of these characters: <i>[, = > : / | -]</i></h4>
-            </h4>
+            <td><code>!guessboss {boss}</code> OR <br> <code>!gb {boss}</code></td>
+            <td><code>!guessboss Bongo Bongo</code></td>
+            <td><h4>Guess a boss entrance before it is found. You can guess this ALONGSIDE regular guesses for extra points. (30 min cooldown)
             </td>
           </tr>
           <tr>

@@ -90,10 +90,38 @@
       </nav>
   <div class="container">
     <h1>Changelog</h1>
-    
+        <div class="card" id="updateAlpha5">
+        <div class="card-header" onclick="toggleCard('updateAlpha5')">
+        <h3>Alpha 5 <span class="update-badge">Latest</span></h3>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="card-content">
+      <p>
+        Earlier than expected, but here's Alpha 5! This is probably the <b>biggest</b> update yet! Here are the new features:
+    </p>
+    <ul class="feature-list">
+      <li class="feature-item">A responsive OBS chatbot widget! Now the bot has a slight delay of 5-10 seconds and NO limits on how fast it can send messages! <br>
+        The YouTube chatbot is still active as well in case you want to look at that instead. Although it is still delayed by 30 seconds and might stop working at any time.
+      </li>
+      <li class="feature-item">Streamlined dungeon and boss guessing! Now you only need to guess the NEXT unexplored dungeon or boss. 
+        Check it's updated use... <a href="commands.html"> <b><u>here!</u></b></a></li>
+      <li class="feature-item">Updated key guesses! Now you can guess "Small Key" for 2 points and guessing specific ones will net you a bonus 3 points! (Total of 5)</li>
+      <li class="feature-item">This website now shows all previous Top 5 game winners on the front page. If you'd like your name to be blurred out let me know at any time in my comments!</li>
+      <li class="removal">Removed Song Teleport Randomization... Sorry! Will add it back in if we find an organic and fun way to use it!</li>
+      <li class="bug-fix">Automatic token reauthentication, when users are using the YouTube bot and need to reauthenticate, it will redirect them automatically to get that done!</li>
+      <li class="bug-fix">Automatic stream grabbing, users no longer need to manually input their stream link, it'll just hook onto any active streams (from the user) automatically!</li>
+      <li class="bug-fix">Enemy Soul guesses weren't relocked in, now they are, and Enemy Souls are now 3 points and not 5. (Boss souls are still 5!)</li>
+      <li class="bug-fix">Players could guess things that have been fully guessed, but now that is no longer the case.</li>
+      <li class="bug-fix">Player's cooldowns didn't properly reset after a successful guess, and now they do.</li>
+      <li class="bug-fix">The guesses.json file (backend) was writing people's UIDs and not their names, making it harder to change things on the backend.</li>
+      <li class="bug-fix">Additionally reformatted the scores.json file to include usernames as well, before it would only show UIDs.</li>
+    </ul>
+    </div>
+    </div>
+
     <div class="card" id="updateAlpha4">
       <div class="card-header" onclick="toggleCard('updateAlpha4')">
-        <h3>Alpha 4 <span class="update-badge">Latest</span></h3>
+        <h3>Alpha 4</h3>
         <span class="arrow">&#9654;</span>
       </div>
       <div class="card-content">
