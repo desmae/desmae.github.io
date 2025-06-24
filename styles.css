@@ -8,15 +8,22 @@
   --card-bg-light: rgba(255, 255, 255, 0.95);
   --card-bg-dark: rgba(34, 34, 34, 0.95);
   --text-light: #333;
-  --text-dark: #e0e0e0;
+  --text-dark: #f5f5f5; /* Made text lighter for dark mode */
+  --nav-height: 60px; /* Define navbar height for potential use */
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all var(--transition-speed) ease;
+  /* Removed global transition for performance; apply transitions to specific properties */
 }
+
+/* Ensure html and body allow content to determine scroll, unless specifically overridden */
+html, body {
+  overflow-x: clip; /* Prevents horizontal scroll on body, children can still scroll with overflow:auto */
+}
+
 
 body {
   margin: 0;
@@ -25,6 +32,7 @@ body {
   color: var(--text-light);
   min-height: 100vh;
   line-height: 1.6;
+  transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 /* Smooth scrolling */
@@ -36,6 +44,7 @@ a {
   text-decoration: none;
   color: inherit;
   position: relative;
+  transition: color var(--transition-speed) ease;
 }
 
 /* Modern Navbar */
@@ -45,20 +54,23 @@ a {
   -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
-  padding: 1rem 2rem;
+  justify-content: space-between; /* Changed for hamburger menu */
+  padding: 0 2rem; /* Adjusted padding */
+  height: var(--nav-height);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: background var(--transition-speed) ease;
 }
 
 .navbar .logo {
   font-size: 1.8rem;
   font-weight: 700;
   color: #5b5b5b;
-  flex-grow: 1;
+  /* flex-grow: 1; Removed for hamburger layout */
   transform: translateY(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color var(--transition-speed) ease;
 }
 
 .navbar .logo:hover {
@@ -68,23 +80,37 @@ a {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1rem; /* Reduced gap slightly */
   padding: 0;
   margin: 0;
+  align-items: center; /* Align items vertically */
 }
 
 .nav-links a {
   color: #555;
   font-weight: 600;
-  transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active-link { /* Style for active link if you implement it */
   color: var(--accent-color);
   background: rgba(255, 154, 158, 0.1);
   transform: translateY(-2px);
+}
+
+/* Hamburger Menu Button - Hidden on Desktop */
+.hamburger-menu {
+  display: none; /* Hidden by default, shown in media query */
+  background: none;
+  border: none;
+  font-size: 2rem; /* Increased size for better tap target */
+  cursor: pointer;
+  color: var(--text-light);
+  padding: 0.5rem; /* Add padding for easier tapping */
+  z-index: 1001; /* Ensure it's above nav-links if they overlap WHEN THE MENU IS CLOSED */
 }
 
 /* Container and Cards */
@@ -97,6 +123,7 @@ a {
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   animation: slideUp 0.5s ease;
+  transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 @keyframes slideUp {
@@ -119,7 +146,7 @@ a {
   margin: 1.5rem 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transform: translateY(0);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Keep this for hover effect */
 }
 
 .card:hover {
@@ -139,26 +166,38 @@ a {
   margin: 0;
   font-weight: 600;
   color: #555;
+  transition: color var(--transition-speed) ease;
 }
 
 .card-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease, padding 0.5s ease; /* Added padding transition */
 }
 
 .card.active .card-content {
-  max-height: 1000px;
+  max-height: 1000px; /* Adjust if content can be very long */
+  padding-top: 1rem; /* Add padding when open */
+  padding-bottom: 1rem;
 }
 
 /* Tables */
+.table-container { /* Wrapper for tables to make them scrollable */
+  display: block; /* Ensure it's a block-level element */
+  overflow-x: auto;
+  width: 100%;
+  margin: 1.5rem 0;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
 .command-table, #items-table {
   width: 100%;
+  min-width: 600px; /* Allows table to be wider than screen, scrolling handled by .table-container */
   border-collapse: separate;
   border-spacing: 0;
-  margin: 1.5rem 0;
+  /* margin: 1.5rem 0; Removed, margin on .table-container now */
   border-radius: 10px;
-  overflow: hidden;
+  overflow: hidden; /* Clips content to rounded corners for the table itself */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -168,6 +207,9 @@ a {
   padding: 1rem;
   text-align: left;
   font-weight: 600;
+  position: sticky; /* Makes header sticky during vertical scroll within table if table itself is scrollable */
+  top: 0;
+  z-index: 10; /* z-index for sticky header within the table context */
 }
 
 .command-table td, #items-table td {
@@ -175,6 +217,7 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.95);
   color: var(--text-light);
+  transition: background var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
 .command-table tr:hover td, #items-table tr:hover td {
@@ -186,69 +229,104 @@ a {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
-  background: var(--accent-color);
   font-size: 0.9rem;
   margin-left: 1rem;
   transform: translateY(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background var(--transition-speed) ease, color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  color: white; /* Default color for badges */
+}
+
+.update-badge {
+  background: var(--accent-color);
   box-shadow: 0 2px 8px rgba(255, 154, 158, 0.3);
-  color: var(--text-light);
 }
 
-/* Version tag overrides for light mode */
 .version-tag {
-  background: #333;
-  color: #fff;
-}
-
-/* Version tag overrides for dark mode */
-body.dark-mode .version-tag {
-  background: #fff;
-  color: #333;
+  background: #333; /* Light mode version tag */
 }
 
 .update-badge:hover, .version-tag:hover {
   transform: translateY(-2px);
+}
+.update-badge:hover {
   box-shadow: 0 4px 12px rgba(255, 154, 158, 0.4);
 }
-
-body.dark-mode .update-badge {
-  background: var(--accent-color);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(255, 154, 158, 0.2);
+.version-tag:hover {
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Dark Mode Styles */
 body.dark-mode {
   background: var(--dark-gradient);
-  color: var(--text-dark);
+  color: var(--text-dark); /* Default text color for dark mode */
 }
 
 body.dark-mode .navbar {
   background: rgba(0, 0, 0, 0.8);
 }
 
+body.dark-mode .navbar .logo {
+  color: var(--text-dark);
+}
+body.dark-mode .nav-links a {
+  color: var(--text-dark);
+}
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.active-link {
+  color: var(--accent-color);
+  background: rgba(255, 154, 158, 0.15);
+}
+
+body.dark-mode .hamburger-menu {
+  color: var(--text-dark);
+}
+
 body.dark-mode .container {
   background: var(--card-bg-dark);
-  color: var(--text-dark);
+  color: var(--text-dark); /* Explicitly set dark mode text color for container content */
 }
 
 body.dark-mode .card {
   background: rgba(42, 42, 42, 0.95);
+  color: var(--text-dark); /* Explicitly set dark mode text color for card content */
+}
+
+/* Ensure headings, paragraphs, and list items in dark mode use the light text color */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li { /* Added p and li here */
   color: var(--text-dark);
 }
+
 
 body.dark-mode .command-table td,
 body.dark-mode #items-table td {
   background: rgba(42, 42, 42, 0.95);
   border-color: #444;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Explicitly set for table cells */
 }
 
 body.dark-mode .command-table tr:hover td,
 body.dark-mode #items-table tr:hover td {
   background: rgba(255, 255, 255, 0.1);
 }
+
+body.dark-mode .version-tag {
+  background: #fff;
+  color: #333;
+}
+body.dark-mode .update-badge {
+  /* background: var(--accent-color); Already set */
+  color: #fff; /* Ensure contrast */
+  box-shadow: 0 2px 8px rgba(255, 154, 158, 0.2);
+}
+
 
 /* Animations */
 @keyframes fadeIn {
@@ -261,7 +339,8 @@ body.dark-mode #items-table tr:hover td {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* Apply animations */
+/* Apply animations - only if not using hamburger menu that hides them initially */
+/*
 .nav-links li {
   animation: slideIn 0.5s ease forwards;
   opacity: 0;
@@ -273,10 +352,11 @@ body.dark-mode #items-table tr:hover td {
 .nav-links li:nth-child(4) { animation-delay: 0.4s; }
 .nav-links li:nth-child(5) { animation-delay: 0.5s; }
 .nav-links li:nth-child(6) { animation-delay: 0.6s; }
+*/
 
 /* Modern Button Styles */
 .dark-mode-btn {
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.2rem; /* Slightly adjusted padding */
   font-weight: 600;
   border: none;
   border-radius: 25px;
@@ -285,6 +365,7 @@ body.dark-mode #items-table tr:hover td {
   color: white;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .dark-mode-btn:hover {
@@ -319,73 +400,206 @@ body.dark-mode #item-search {
   color: var(--text-dark);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .nav-links {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-  }
-  
-  .nav-links li {
-    width: 100%;
-  }
-  
-  .dark-mode-btn {
-    width: 100%;
-    padding: 0.5rem;
-  }
-  .table-container {
-    margin: 1rem -1rem; 
-    width: calc(100% + 2rem);
-  }
-}
-  .container {
-    margin: 1rem;
-    padding: 1rem;
-  }
-  
-  .table-container {
-    overflow-x: auto;
-    width: 100%;
-    margin: 1.5rem 0;
-    -webkit-overflow-scrolling: touch; 
-  }
-
-  .command-table, #items-table {
-    min-width: 600px; 
-  }
-}
-
 /* Code block styling */
 code {
   background: rgba(255, 154, 158, 0.1);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-family: monospace;
+  transition: background var(--transition-speed) ease;
+  /* Text color for code will be inherited, should be var(--text-light) or var(--text-dark) */
 }
 
 body.dark-mode code {
   background: rgba(255, 255, 255, 0.1);
+  color: var(--text-dark); /* Explicitly set code text color in dark mode */
+}
+
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem; /* Reduced padding for smaller screens */
+    height: auto; /* Allow navbar to grow if content wraps (though hamburger aims to prevent this) */
+    min-height: var(--nav-height);
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger on mobile */
+    /* Ensure it's easily tappable and visible */
+    font-size: 2.2rem; /* Slightly larger */
+    padding: 0.5rem 0.8rem; /* Adjust padding for tap area */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-height); /* Position below navbar */
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98); /* Slightly more opaque for readability */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Should be higher than page content, same level or just below navbar bar if not overlapping */
+                   /* If hamburger is 1001, this should be 1000 or less to be "under" it if they could overlap,
+                      but they are typically exclusive. Let's make it high to be above other page content. */
+    padding: 1rem 0; /* Add some padding */
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when hamburger is clicked */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block; /* Make entire area clickable */
+    padding: 1rem; /* Larger tap target */
+    border-radius: 0; /* Full width feel */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+   .nav-links li:last-child a {
+    border-bottom: none;
+   }
+
+  body.dark-mode .nav-links {
+    background: rgba(20, 20, 20, 0.98);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  body.dark-mode .nav-links a {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+   body.dark-mode .nav-links li:last-child a {
+    border-bottom: none;
+   }
+
+
+  .dark-mode-btn {
+    /* If button is inside nav-links when active */
+    width: auto; /* Adjust if it's part of the collapsible menu */
+    margin: 0.5rem auto; /* Center it if it's a block in the column */
+    display: block; /* Make it a block element to center with margin auto */
+    padding: 0.8rem 1.5rem;
+  }
+
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  /* Table cells padding and font size for better readability on mobile */
+  .command-table th, .command-table td,
+  #items-table th, #items-table td {
+    padding: 0.75rem 0.5rem; /* Reduced padding */
+    font-size: 0.85rem; /* Slightly smaller font for tables */
+    white-space: nowrap; /* Prevent text wrapping in cells, rely on horizontal scroll */
+  }
+  /* Allow specific columns to wrap if needed by adding a class to them */
+  .command-table td.description-cell,
+  #items-table td.aliases-cell {
+    white-space: normal; /* Allow description/aliases to wrap */
+  }
+
+
+  .card {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .card-header {
+    padding: 0.8rem;
+  }
+  /* h3 font size for mobile is handled by the general h3 rule below */
+
+
+  /* Teaser Page Specific */
+  .teaser-item {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .teaser-item::before {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .coming-soon { /* teaser.html */
+    font-size: 1.8rem; /* Reduce font size */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Index Page Specific */
+  .hero-title { /* index.html */
+    font-size: 2rem;
+  }
+  .hero-section .description p {
+    font-size: 0.9rem;
+  }
+  .social-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    margin: 0.5rem;
+  }
+  .social-link svg {
+    height: 18px;
+    width: 18px;
+  }
+
+  .leaderboard { /* index.html */
+    padding: 1rem;
+  }
+  .leaderboard-title { /* index.html */
+    font-size: 1.5rem;
+  }
+  .leaderboard-list li {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  .leaderboard-list li::before {
+    font-size: 1rem;
+  }
+
+  /* Commands Page Specific */
+  #item-search { /* commands.html */
+    padding: 0.8rem; /* Simpler padding for mobile */
+    font-size: 0.9rem;
+  }
+  .search-icon { /* commands.html - ensure it's visible and positioned correctly */
+    font-size: 1rem;
+    left: 0.8rem;
+  }
+
+  /* General font adjustments for smaller headings on mobile */
+  body.dark-mode h1, h1 { font-size: 1.8rem; }
+  body.dark-mode h2, h2 { font-size: 1.5rem; }
+  body.dark-mode h3, h3 { font-size: 1.25rem; } /* This includes card-header h3 on mobile */
+  body.dark-mode h4, h4 { font-size: 1.1rem; } /* Added for h4 on mobile */
+  body.dark-mode p, p { font-size: 0.95rem; }
+}
+
+/* Further adjustments for very small screens if necessary */
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.5rem; /* Further reduce logo size */
+  }
+  .dark-mode-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  body.dark-mode h1, h1 { font-size: 1.6rem; }
+  body.dark-mode h2, h2 { font-size: 1.35rem; }
+  body.dark-mode h3, h3 { font-size: 1.15rem; }
+  body.dark-mode h4, h4 { font-size: 1rem; } /* Added for h4 on very small screens */
+  body.dark-mode p, p { font-size: 0.9rem; }
+
+  .command-table th, .command-table td,
+  #items-table th, #items-table td {
+    font-size: 0.8rem; /* Even smaller for dense tables */
+  }
 }

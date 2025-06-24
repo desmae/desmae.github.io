@@ -1,0 +1,48 @@
+{
+    "dungeons": [
+      {
+        "name": "Woodfall Temple",
+        "aliases": ["WT", "WFT", "Woodfall", "Swamp Temple", "Wood Temple"]
+      },
+      {
+        "name": "Snowhead Temple",
+        "aliases": ["ST", "SHT", "Snowhead", "Mountain Temple", "Snow Temple"]
+      },
+      {
+        "name": "Great Bay Temple",
+        "aliases": ["GBT", "GT", "Great Bay", "Bay Temple", "Water Temple", "Ocean Bay Temple", "Ocean Temple"]
+      },
+      {
+        "name": "Stone Tower Temple",
+        "aliases": ["STT", "ST", "Stone Tower", "Ikana Temple", "Canyon Temple"]
+      },
+      {
+        "name": "Inverted Stone Tower Temple",
+        "aliases": ["IST", "ISTT", "Inverted", "Inverted Stone Tower", "Inverted Tower", "Inverted Stone", "Inverted Temple"]
+      },
+      {
+        "name": "Beneath the Well",
+        "aliases": ["BTW", "BW", "Well", "Bottom of the Well", "BotW", "Beneath Well", "Ikana Well", "Gibdo Well", "Gibdo"]
+      },
+      {
+        "name": "Swamp Skulltula House",
+        "aliases": ["SSH", "SH", "Swamp House", "Swamp Skulltula"]
+      },
+      {
+        "name": "Ocean Skulltula House",
+        "aliases": ["OSH", "OH", "Ocean House", "Ocean Skulltula"]
+      },
+      {
+        "name": "The Moon",
+        "aliases": ["Moon", "TM", "M", "Trials"]
+      },
+      {
+        "name": "Ikana Castle",
+        "aliases": ["Castle", "IC", "Canyon Castle"]
+      },
+      {
+        "name": "Pirate's Fortress",
+        "aliases": ["Pirate Fortress", "PF", "Pirate", "Fortress"]
+      }
+    ]
+  }

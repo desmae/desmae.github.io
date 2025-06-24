@@ -2,15 +2,15 @@
     "dungeons": [
       {
         "name": "Deku Tree",
-        "aliases": ["Great Deku Tree", "Inside Deku Tree", "DT", "GDT"]
+        "aliases": ["Great Deku Tree", "Inside Deku Tree", "DT", "GDT", "Deku", "Tree"]
       },
       {
         "name": "Dodongo's Cavern",
-        "aliases": ["Dodongo Cavern", "Dodongos Cavern", "DC"]
+        "aliases": ["Dodongo Cavern", "Dodongos Cavern", "DC", "Dodongo"]
       },
       {
         "name": "Jabu Jabu's Belly",
-        "aliases": ["Jabu's Belly", "Inside Jabu-Jabu", "JJB"]
+        "aliases": ["Jabu's Belly", "Inside Jabu-Jabu", "JJB", "Jabu"]
       },
       {
         "name": "Forest Temple",
@@ -27,6 +27,14 @@
       {
         "name": "Shadow Temple",
         "aliases": ["ShT", "Shadow"]
+      },
+      {
+        "name": "Gerudo Training Grounds",
+        "aliases": ["GTG", "Gerudo Training", "Training Grounds"]
+      },
+      {
+        "name": "Gerudo Fortress",
+        "aliases": ["GF", "Gerudo Fort"]
       },
       {
         "name": "Spirit Temple",

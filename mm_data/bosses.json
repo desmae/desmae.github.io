@@ -1,0 +1,25 @@
+{
+    "bosses": [
+      {
+        "name": "Odolwa",
+        "aliases": ["OD", "O", "Woodfall Boss", "Swamp Boss"]
+      },
+      {
+        "name": "Goht",
+        "aliases": ["GO", "GH", "Snowhead Boss", "Mountain Boss", "Snow Boss", "Goat"]
+      },
+      {
+        "name": "Gyorg",
+        "aliases": ["GY", "GR", "Great Bay Boss", "Bay Boss", "Ocean Boss"]
+      },
+      {
+        "name": "Twinmold",
+        "aliases": ["TM", "T", "TW", "Canyon Boss", "Stone Tower Boss", "Tower Boss"]
+      },
+      {
+        "name": "Igos Du Ikana",
+        "aliases": ["IDI", "I", "IG", "Igos", "Ikana Castle Boss", "Ikana Boss", "Igos Ikana"]
+      }
+    ]
+  }
+  

@@ -1,0 +1,479 @@
+{
+  "Common": [
+    {
+      "name": "Arrows"
+    },
+    {
+      "name": "Big Poe"
+    },
+    {
+      "name": "Poe"
+    },
+    {
+      "name": "Bombs"
+    },
+    {
+      "name": "Bombchus"
+    },
+    {
+      "name": "Bug"
+    },
+    {
+      "name": "Deku Nut"
+    },
+    {
+      "name": "Deku Stick"
+    },
+    {
+      "name": "Magic Jar"
+    },
+    {
+      "name": "Fish"
+    },
+    {
+      "name": "Spring Water"
+    },
+    {
+      "name": "Hot Spring Water"
+    },
+    {
+      "name": "Powder Keg"
+    },
+    {
+      "name": "Recovery Heart"
+    },
+    {
+      "name": "Ocean Skulltula Token",
+      "aliases": ["Ocean Token", "Ocean Skulltula", "OGS", "OGST"],
+      "activates": "Gold Skulltula Token"
+    },
+    {
+      "name": "Swamp Skulltula Token",
+      "aliases": ["Swamp Token", "Swamp Skulltula", "SGS", "SGST"],
+      "activates": "Gold Skulltula Token"
+    }
+  ],
+  "Uncommon": [
+    {
+      "name": "Mask"
+    },
+    {
+      "name": "Woodfall Stray Fairy",
+      "aliases": ["Woodfall Fairy", "WFSF"],
+      "activates": "Stray Fairy"
+    },
+    {
+      "name": "Snowhead Stray Fairy",
+      "aliases": ["Snowhead Fairy", "SHSF"],
+      "activates": "Stray Fairy"
+    },
+    {
+      "name": "Great Bay Stray Fairy",
+      "aliases": ["Great Bay Fairy", "GBSF"],
+      "activates": "Stray Fairy"
+    },
+    {
+      "name": "Stone Tower Stray Fairy",
+      "aliases": ["Stone Tower Fairy", "STSF"],
+      "activates": "Stray Fairy"
+    },
+    {
+      "name": "Small Key",
+      "aliases": ["SK"]
+    },
+    {
+      "name": "Heart Piece"
+    },
+    {
+      "name": "Heart Container"
+    },
+    {
+      "name": "Red Rupee",
+      "activates": "Rupee"
+    },
+    {
+      "name": "Blue Rupee",
+      "activates": "Rupee"
+    },
+    {
+      "name": "Blue Potion"
+    },
+    {
+      "name": "Green Potion"
+    },
+    {
+      "name": "Red Potion"
+    },
+    {
+      "name": "Fairy"
+    },
+    {
+      "name": "Zora Egg"
+    },
+    {
+      "name": "Chateau Romani"
+    },
+    {
+      "name": "Milk"
+    }
+  ],
+  "Rare": [
+    {
+      "name": "Bottle"
+    },
+    {
+      "name": "Anju Kafei Quest Item"
+    },
+    {
+      "name": "Compass"
+    },
+    {
+      "name": "Dungeon Map"
+    },
+    {
+      "name": "Boss Key"
+    },
+    {
+      "name": "Title Deed"
+    },
+    {
+      "name": "Green Rupee",
+      "activates": "Rupee"
+    },
+    {
+      "name": "Purple Rupee",
+      "activates": "Rupee"
+    },
+    {
+      "name": "Silver Rupee",
+      "activates": "Rupee"
+    },
+    {
+      "name": "Magic Mushroom"
+    }
+  ],
+  "Epic": [
+    {
+      "name": "Progressive Wallet",
+      "aliases": ["Wallet", "Adult's Wallet", "Giant's Wallet", "Tycoon's Wallet", "Child's Wallet"]
+    },
+    {
+      "name": "Progressive Bomb Bag",
+      "aliases": ["Bomb Bag", "Big Bomb Bag", "Biggest Bomb Bag", "Bomb Bag Upgrade", "Bomb Upgrade"]
+    },
+    {
+      "name": "Progressive Bow",
+      "aliases": ["Bow", "Hero's Bow", "Fairy Bow", "Bow Upgrade", "Quiver", "Large Quiver", "Largest Quiver", "Quiver Upgrade"]
+    },
+    {
+      "name": "Gold Rupee",
+      "aliases": ["Huge Rupee", "Orange Rupee"],
+      "activates": "Rupee"
+    },
+    {
+      "name": "Hero's Shield",
+      "aliases": ["Hylian Shield", "Shield"]
+    },
+    {
+      "name": "Woodfall Small Key",
+      "aliases": ["Woodfall Temple Small Key", "Woodfall SK", "WFSK", "WFT Small Key", "WFTSK"],
+      "activates": "Small Key"
+    },
+    {
+      "name": "Snowhead Small Key",
+      "aliases": ["Snowhead Temple Small Key", "Snowhead SK", "SHSK", "SHT Small Key", "SHTSK"],
+      "activates": "Small Key"
+    },
+    {
+      "name": "Great Bay Small Key",
+      "aliases": ["Great Bay Temple Small Key", "Great Bay SK", "GBSK", "GBT Small Key", "GBTSK"],
+      "activates": "Small Key"
+    },
+    {
+      "name": "Stone Tower Small Key",
+      "aliases": ["Stone Tower Temple Small Key", "Stone Tower SK", "STSK", "STT Small Key", "STTSK"],
+      "activates": "Small Key"
+    }
+  ],
+  "Legendary": [
+    {
+      "name": "All-Night Mask",
+      "aliases": ["ANM", "All Night Mask"],
+      "activates": "Mask"
+    },
+    {
+      "name": "Blast Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Bomber's Notebook"
+    },
+    {
+      "name": "Bremen Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Bunny Hood",
+      "activates": "Mask"
+    },
+    {
+      "name": "Captain's Hat",
+      "activates": "Mask"
+    },
+    {
+      "name": "Circus Leader's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Couple's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Deku Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Deku Princess (Bottle)",
+      "aliases": ["Deku Princess Bottle", "Deku Princess in a Bottle", "Deku Princess"],
+      "activates": "Bottle"
+    },
+    {
+      "name": "Don Gero's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Fierce Deity's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Fire Arrow"
+    },
+    {
+      "name": "Garo's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Giant's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Gibdo Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Gilded Sword"
+    },
+    {
+      "name": "Goht's Remains"
+    },
+    {
+      "name": "Gold Dust (Bottle)",
+      "aliases": ["Gold Dust in a Bottle", "Gold Dust Bottle", "Gold Dust", "Dust"],
+      "activates": "Bottle"
+    },
+    {
+      "name": "Goron Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Great Fairy's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Great Fairy's Sword"
+    },
+    {
+      "name": "Gyorg's Remains"
+    },
+    {
+      "name": "Hookshot",
+      "aliases": ["Longshot", "Progressive Hookshot", "Hook Shot", "Long Shot"]
+    },
+    {
+      "name": "Ice Arrow"
+    },
+    {
+      "name": "Kafei's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Kamaro's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Keaton Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Kokiri Sword"
+    },
+    {
+      "name": "Lens of Truth",
+      "aliases": ["Lens", "Truth Lens"]
+    },
+    {
+      "name": "Letter to Kafei",
+      "aliases": ["Kafei's Letter"],
+      "activates": "Anju Kafei Quest Item"
+    },
+    {
+      "name": "Light Arrow"
+    },
+    {
+      "name": "Mask of Scents",
+      "activates": "Mask"
+    },
+    {
+      "name": "Mask of Truth",
+      "activates": "Mask"
+    },
+    {
+      "name": "Mirror Shield"
+    },
+    {
+      "name": "Moon's Tear",
+      "activates": "Title Deed"
+    },
+    {
+      "name": "Ocarina of Time"
+    },
+    {
+      "name": "Odolwa's Remains"
+    },
+    {
+      "name": "Pendant of Memories",
+      "aliases": ["Pendant", "Memories Pendant"],
+      "activates": "Anju Kafei Quest Item"
+    },
+    {
+      "name": "Pictograph Box"
+    },
+    {
+      "name": "Postman's Hat",
+      "activates": "Mask"
+    },
+    {
+      "name": "Razor Sword"
+    },
+    {
+      "name": "Romani's Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Seahorse (Bottle)",
+      "activates": "Bottle"
+    },
+    {
+      "name": "Special Delivery to Mama",
+      "activates": "Anju Kafei Quest Item"
+    },
+    {
+      "name": "Stone Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Twinmold's Remains"
+    },
+    {
+      "name": "Zora Mask",
+      "activates": "Mask"
+    },
+    {
+      "name": "Woodfall Boss Key",
+      "aliases": ["Woodfall Temple Boss Key", "Woodfall BK", "WFBK", "WFT Boss Key", "WFTBK"],
+      "activates": "Boss Key"
+    },
+    {
+      "name": "Snowhead Boss Key",
+      "aliases": ["Snowhead Temple Boss Key", "Snowhead BK", "SHBK", "SH Boss Key", "SHBK"],
+      "activates": "Boss Key"
+    },
+    {
+      "name": "Great Bay Boss Key",
+      "aliases": ["Great Bay Temple Boss Key", "Great Bay BK", "GBBK", "GB Boss Key", "GBBK"],
+      "activates": "Boss Key"
+    },
+    {
+      "name": "Stone Tower Boss Key",
+      "aliases": ["Stone Tower Temple Boss Key", "Stone Tower BK", "STBK", "ST Boss Key", "STBK"],
+      "activates": "Boss Key"
+    },
+    {
+      "name": "Woodfall Compass",
+      "activates": "Compass"
+    },
+    {
+      "name": "Snowhead Compass",
+      "activates": "Compass"
+    },
+    {
+      "name": "Great Bay Compass",
+      "activates": "Compass"
+    },
+    {
+      "name": "Stone Tower Compass",
+      "activates": "Compass"
+    },
+    {
+      "name": "Woodfall Dungeon Map",
+      "activates": "Dungeon Map"
+    },
+    {
+      "name": "Snowhead Dungeon Map",
+      "activates": "Dungeon Map"
+    },
+    {
+      "name": "Great Bay Dungeon Map",
+      "activates": "Dungeon Map"
+    },
+    {
+      "name": "Stone Tower Dungeon Map",
+      "activates": "Dungeon Map"
+    },
+    {
+      "name": "Fishing Hole Pass"
+    },
+    {
+      "name": "Land Title Deed",
+      "activates": "Title Deed"
+    },
+    {
+      "name": "Mountain Title Deed",
+      "activates": "Title Deed"
+    },
+    {
+      "name": "Ocean Title Deed",
+      "activates": "Title Deed"
+    },
+    {
+      "name": "Swamp Title Deed",
+      "activates": "Title Deed"
+    },
+    {
+      "name": "Room Key",
+      "activates": "Anju Kafei Quest Item"
+    },
+    {
+      "name": "Powder Keg License",
+      "activates": "Powder Keg"
+    }
+  ],
+  "VeryCommon": [
+    {
+      "name": "Stray Fairy",
+      "aliases": ["Stray Fairies", "SF"]
+    },
+    {
+      "name": "Gold Skulltula Token",
+      "aliases": ["Gold Token", "Gold Skulltula", "GS", "GST"]
+    },
+    {
+      "name": "Rupee"
+    }
+  ],
+  "Custom": [
+    {
+      "name": "Bomber's Notebook"
+    }
+  ]
+}

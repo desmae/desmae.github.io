@@ -96,20 +96,82 @@
     body.dark-mode .footer {
       border-color: rgba(255, 255, 255, 0.1);
     }
+    .leaderboard {
+    margin: 3rem auto;
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards 1.5s;
+  }
+
+  .leaderboard-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    text-align: center;
+  }
+
+  .leaderboard-subtitle {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+
+  .leaderboard-list {
+    list-style: none;
+    counter-reset: leaderboard-counter;
+    padding: 0;
+  }
+
+  .leaderboard-list li {
+    counter-increment: leaderboard-counter;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leaderboard-list li::before {
+    content: counter(leaderboard-counter);
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .score {
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  body.dark-mode .score {
+    color: #aaa;
+  }
+
+  body.dark-mode .leaderboard {
+    background: rgba(0, 0, 0, 0.2);
+  }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">GTI Chat Bot</div>
+    <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="commands.html">Commands</a></li>
-      <li><a href="features.html">New Features</a></li>
-      <li><a href="changelog.html">Changelog</a></li>
-      <li><a href="teaser.html">Upcoming</a></li>
-      <li><button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="features.html">New Features</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="teaser.html">Upcoming</a></li>
+        <li><button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button></li>
     </ul>
-  </nav>
+</nav>
   
   <div class="container">
     <div class="hero-section">
@@ -138,8 +200,31 @@
       </div>
     </div>
 
+    <section class="leaderboard">
+      <h2 class="leaderboard-title">1st Alpha Test Winners</h2>
+      <p class="leaderboard-subtitle">Zelda: Ocarina of Time (SOH) Randomizer - GTI: Alpha 1-3</p>
+      <ol class="leaderboard-list">
+        <li>Scytro 👑 <span class="score">(42 pts)</span></li>
+        <li>Ellie Bell <span class="score">(32 pts)</span></li>
+        <li>Squallshade <span class="score">(25 pts)</span></li>
+        <li>jean maillard <span class="score">(18 pts)</span></li>
+        <li>Zypher <span class="score">(14 pts)</span></li>
+      </ol>
+    </section>
+    <section class="leaderboard">
+      <h2 class="leaderboard-title">2nd Alpha Test Winners</h2>
+      <p class="leaderboard-subtitle">Zelda: Ocarina of Time (3D) Randomizer - GTI: Alpha 4-5</p>
+      <ol class="leaderboard-list">
+        <li>Ellie Bell 👑 <span class="score">(244 pts)</span></li>
+        <li>m2existance <span class="score">(222 pts)</span></li>
+        <li>Scytro <span class="score">(147 pts)</span></li>
+        <li>Ray Cat <span class="score">(135 pts)</span></li>
+        <li>Help14 <span class="score">(100 pts)</span></li>
+      </ol>
+    </section>
+    
     <footer class="footer">
-      <p>Last updated: 2025-05-15 <span class="version-tag">Alpha 5</span></p>
+      <p>Last updated: 2025-06-23 <span class="version-tag">Alpha 6</span></p>
       <p>Desmae 2025 (C). Not affiliated with Nintendo. </p>
       <br>
       <br>
@@ -150,31 +235,58 @@
   </div>
   
   <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Hamburger Menu Toggle Logic ---
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const isExpanded = navLinks.classList.contains('active');
+        hamburger.setAttribute('aria-expanded', isExpanded);
+        hamburger.innerHTML = isExpanded ? '&times;' : '&#9776;';
+      });
+    }
+
+    // --- Dark Mode Toggle Logic ---
     const toggleButton = document.getElementById('dark-mode-toggle');
-  
+
     function enableDarkMode() {
       document.body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'enabled'); 
-      toggleButton.textContent = "Light Mode";
+      localStorage.setItem('darkMode', 'enabled');
+      if (toggleButton) {
+          toggleButton.textContent = "Light Mode";
+      }
     }
-  
+
     function disableDarkMode() {
       document.body.classList.remove('dark-mode');
       localStorage.setItem('darkMode', 'disabled');
-      toggleButton.textContent = "Dark Mode";
+      if (toggleButton) {
+          toggleButton.textContent = "Dark Mode";
+      }
     }
-  
+
+    // Initialize dark mode based on what's saved in the browser
     if (localStorage.getItem('darkMode') === 'enabled') {
       enableDarkMode();
+    } else {
+      disableDarkMode();
     }
-  
-    toggleButton.addEventListener('click', () => {
-      if (document.body.classList.contains('dark-mode')) {
-        disableDarkMode();
-      } else {
-        enableDarkMode();
-      }
-    });
-  </script>
+
+    // Add the click listener for the button
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+          if (document.body.classList.contains('dark-mode')) {
+            disableDarkMode();
+          } else {
+            enableDarkMode();
+          }
+        });
+    }
+});
+</script>
+
 </body>
 </html>
